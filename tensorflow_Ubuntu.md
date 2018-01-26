@@ -1,10 +1,12 @@
-# Installing TensorFlow with GPU support on Ubuntu
+# Notes and useful command in TensorFlow
 
-Steps I took to install TensorFlow on Ubuntu on my PC. I followed this [guide](https://www.tensorflow.org/install/install_linux) written by the folks at Google.
+## Switch between GPU and CPU for training
+Set GPU to 0 below for no GPUs (e.g. use CPU only). Set to 1 and TensorFlow will automatically use the GPU.
+```
+config = tf.ConfigProto(
+    device_count = {'GPU': 0}
+)
+sess = tf.Session(config=config)
+```
 
-1. Install NVIDIA requirements to run TensorFlow with GPU support
-2. Install Anaconda
-3. Create conda environment and install TensorFlow there
-
-How to check if installation worked
 
