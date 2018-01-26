@@ -1,0 +1,9 @@
+# Installing Ubuntu
+
+1. Download version 16.04.3 LTS of Ubuntu Desktop from the Ubuntu website
+    - The file you download will be an ISO image of the operating system
+2. Create a bootable USB drive on your current operating system
+    - This requires using a USB stick writing tool such as Rufus
+    - See this [tutorial](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0) for how to do this
+3. Restart your computer and boot from the bootable USB drive you created in step 2. Follow the instructions on screen.
+    - Good reference [here](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#8)
