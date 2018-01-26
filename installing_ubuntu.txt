@@ -12,3 +12,7 @@
 - Install OpenSSH: `sudo apt-get install openssh-server`
 - then restart the service: `sudo service ssh restart`
 - If you get a REMOTE HOST IDENTIFICATION HAS CHANGED! warning (and you know this is the host you want to ssh to), then delete the offending ECDSA key in ~/.ssh/known_hosts
+
+## Applications to install
+- OpenSSH (see above)
+- Vim: `sudo apt install vim`
