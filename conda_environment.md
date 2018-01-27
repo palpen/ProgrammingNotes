@@ -41,13 +41,29 @@
 ### How to list and check currently active environments
 - `conda info --envs`
 
-### How to export environment into a .yml file
+### How to export environment into a .yml file (not a good idea)
 - `conda env export > environment.yml`
 
 ### How to delete an environment
 - `conda remove --name flowers --all`
 
 ### virtual environment best practices
+
+Create environment.yml file by hand. Here's an example
+
+```
+name: toxic_comment_kaggle
+dependencies:
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - keras
+  - python=3.5
+```
+
+This way, you let conda deal with the dependencies required for each of these packages. Also, you reduce the likelihood of an error when creating this environment on a different operating system
+
 - https://stackoverflow.com/questions/39280638/how-to-share-conda-environments-across-platforms
 - https://github.com/conda/conda/tree/master/conda_env
 
