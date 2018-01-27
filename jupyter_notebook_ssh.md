@@ -13,7 +13,7 @@ This works only if machines are on the same network. The set up required to secu
 
 ## Summary
 - `jupyter notebook --no-browser --port=8889` (remote)
-- ``ssh -N -L localhost:8887:localhost:8889 <username>@<server ip address>` (local)
+- `ssh -N -L localhost:8887:localhost:8889 <username>@<server ip address>` (local)
 - `localhost:8887` (local browser)
 
 Reference: https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
