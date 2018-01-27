@@ -7,6 +7,9 @@
     + `source activate udacity_ml_titanic`
 - Install ipython notebook in new environment
     + `conda install ipython-notebook`
+    + Alternatively, you can install the notebook extension that allows you to switch kernels into your various environments
+        * `conda install nb_conda`
+        * I wonder if you can just install this in root and not have to install it every time you create a new environment ???
 - Deactivate then reactivate the environment to detect new installation of ipython notebook
 - After reactivating the notebook, use `jupyter notebook` command to open the notebook
 - check python version to confirm  version installed is 2.7
