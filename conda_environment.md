@@ -41,14 +41,14 @@
 ### How to list and check currently active environments
 - `conda info --envs`
 
-### How to export environment into a .yml file (not a good idea)
+### How to export environment into a .yml file
+Not a great idea if this is going to be used to create an environment in another operating system (see best practices below)
 - `conda env export > environment.yml`
 
 ### How to delete an environment
 - `conda remove --name flowers --all`
 
 ### virtual environment best practices
-
 Create environment.yml file by hand. Here's an example
 
 ```
