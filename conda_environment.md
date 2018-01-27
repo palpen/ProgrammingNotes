@@ -40,6 +40,8 @@
 
     prefix: /Users/bjherger/anaconda2/envs/uber_env
     ```
+- Follow with installation of extension to let you switch environments within a jupyter notebook: `conda install nb_conda`
+- Reactivate virtual environment
 
 ### How to list and check currently active environments
 - `conda info --envs`
