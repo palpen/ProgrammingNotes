@@ -11,4 +11,9 @@ This works only if machines are on the same network. The set up required to secu
     - If you are asked for an access token, you can find it in the terminal where you activated the remote Jupyter notebook (see 1.)
     - If you get a "bind: Address already in use" error, use a different port number. It may be that you are already using that port number on a local Jupyter notebook.
 
+## Summary
+- `jupyter notebook --no-browser --port=8889` (remote)
+- ``ssh -N -L localhost:8887:localhost:8889 <username>@<server ip address>` (local)
+- `localhost:8887` (local browser)
+
 Reference: https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
