@@ -44,4 +44,11 @@
 ### How to export environment into a .yml file
 - `conda env export > environment.yml`
 
+### How to delete an environment
+- `conda remove --name flowers --all`
+
+### virtual environment best practices
+- https://stackoverflow.com/questions/39280638/how-to-share-conda-environments-across-platforms
+- https://github.com/conda/conda/tree/master/conda_env
+
 Reference: https://conda.io/docs/user-guide/tasks/manage-environments.html
