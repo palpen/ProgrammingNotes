@@ -54,12 +54,13 @@ Create environment.yml file by hand. Here's an example
 ```
 name: toxic_comment_kaggle
 dependencies:
+  - python=3.5
   - pandas
   - numpy
   - matplotlib
   - scikit-learn
   - keras
-  - python=3.5
+  - ipython-notebook
 ```
 
 This way, you let conda deal with the dependencies required for each of these packages. Also, you reduce the likelihood of an error when creating this environment on a different operating system
