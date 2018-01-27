@@ -11,6 +11,7 @@
 ## Applications to install
 - OpenSSH (see below)
 - Vim: `sudo apt install vim`
+- git
 
 ## Setting up SSH access
 - Install OpenSSH: `sudo apt-get install openssh-server`
