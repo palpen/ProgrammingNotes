@@ -17,6 +17,15 @@ Before installing anything, `sudo apt-get update`
 - git: `sudo apt-get install git`
 - screen (terminal multiplexer): `sudo apt-get install screen`
 
+## Prompt customization
+- Reduce prompt clutter by displaying only active virtual environment, username, and last two directories
+    + Change
+        `PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '`
+    + to 
+        `PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]\$ '`
+    + `\u` is your username, `\h` is the server name, which we removed
+    + Also, add PROMPT_DIRTRIM=2 at the top of your .bashrc file to trim the directories shown
+
 ## Setting up SSH access
 - Install OpenSSH: `sudo apt-get install openssh-server`
 - then restart the service: `sudo service ssh restart`
