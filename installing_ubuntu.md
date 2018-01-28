@@ -9,9 +9,13 @@
     - Good reference [here](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#8)
 
 ## Applications to install
-- OpenSSH (see below)
+Before installing anything, `sudo apt-get update`
+
+- OpenSSH (enables ssh access--see below)
+- anaconda
 - Vim: `sudo apt install vim`
-- git
+- git: `sudo apt-get install git`
+- screen (terminal multiplexer): `sudo apt-get install screen`
 
 ## Setting up SSH access
 - Install OpenSSH: `sudo apt-get install openssh-server`
