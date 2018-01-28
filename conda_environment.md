@@ -50,6 +50,16 @@
 Not a great idea if this is going to be used to create an environment in another operating system (see best practices below)
 - `conda env export > environment.yml`
 
+### Conda environment and TensorFlow
+- TensorFlow on CPU
+    + create conda environment using the yml file, but don't include tensorflow in the file
+    + Once the environment is set up and activated, install tensorflow following command: `conda install -c https://conda.anaconda.org/jjhelmus tensorflow`
+        * https://stackoverflow.com/questions/46382909/tensorflow-is-not-working-on-a-conda-environment
+- TensorFlow on GPU (machine with a GPU)
+    - Create the environment, again using the yml file but making sure it does not have TensorFlow
+    - In the activated environment, `pip uninstall tensorflow` (this should have been installed along with keras)
+    - Then install the GPU version of TensorFlow: `pip install tensorflow-gpu`
+
 ### How to delete an environment
 - `conda remove --name flowers --all`
 
