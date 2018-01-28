@@ -53,7 +53,12 @@ Not a great idea if this is going to be used to create an environment in another
 ### How to delete an environment
 - `conda remove --name flowers --all`
 
-### virtual environment best practices
+### Automatically activate an environment when you cd into it
+- Install autoenv: `pip install autoenv && source activate.sh`
+- Create a .env file with `source activate <env name>` in it inside the folder containing the code for the virtual environment
+- Now every time you enter that folder from the command line the virtual environment will be activated.
+
+### Virtual environment best practices
 Create environment.yml file by hand. Here's an example
 
 ```
