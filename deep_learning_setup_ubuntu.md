@@ -50,6 +50,10 @@ There are three broad tasks you need to do to prepare your machine for deep lear
 - Uploading files from my local machine to host
     + `scp localfile <username>@<ip address>:~/remotefolder`
 - Check version of tensorflow installed without importing it: `pip list | grep tensorflow`
+- How to monitor GPU utilization
+    + `watch -n 5 nvidia-smi -a --display=utilization`
+- Monitor GPU temperature
+    + `watch -n 5 nvidia-smi -q -d temperature`
 
 ### Good references
 1. http://tuatini.me/part-1-how-to-setup-your-own-environment-for-deep-learning/
