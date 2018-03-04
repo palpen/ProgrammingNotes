@@ -2,7 +2,9 @@
 ## SSH and Networking
 1. Copy contents of local directory to remote server
     `scp -r ./sourcedirectory/ username@ipaddress:~/remotedirectory`
-    * if copying individual files, remove the -r option (which enables recursive copying for directories) 
+    * if copying individual files, remove the -r option (which enables recursive copying for directories)
+2. List all network open ports
+    `lsof -i`
 
 ## Exploring Directories
 1.  Get size of directory
