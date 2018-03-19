@@ -43,6 +43,14 @@
 - Follow with installation of extension to let you switch environments within a jupyter notebook: `conda install nb_conda`
 - Reactivate virtual environment
 
+### Checking the program file in user path
+To check that the python or jupyter notebook you are using is indeed the one installed inside your environment, use the `which` command
+- `which python`
+- `which ipython`
+- `which jupyter`
+
+To see a list of all the packages installed under an environment, `ls /Users/USERNAME/anaconda2/envs/MY_ENVIRONMENT`
+
 ### How to list and check currently active environments
 - `conda info --envs`
 
