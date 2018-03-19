@@ -16,4 +16,47 @@ This works only if machines are on the same network. The set up required to secu
 - `ssh -N -L localhost:8887:localhost:8889 <username>@<server ip address>` (local)
 - `localhost:8887` (local browser)
 
+## Custom setup
+- see `private_work.sh` in `/Users/palermospenano/.bashrc.d`
+- This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
+
+```bash
+jupyssh(){
+    # When you provide the project folder and environment name arguements
+    # this function will cd into that folder in the remote machine and
+    # activate the environment for that project
+
+    # Part 1 kills the port 8889 if already active
+    # Part 2 will initialize a Jupyter Lab notebook in the remote host
+    # Press Control+c to exit this ssh session and automatically
+    # enter Part 3 to bind the remote port 8889 to local port 8887
+
+    # usage: jupyssh <projectpath> <project environment name>
+    # e.g. jupyssh ~/Dropbox/data_science/fastai_deeplearning/pt1/fastai fastai
+    # Control + c after each part to move to next part
+
+    projectpath=$1
+    envname=$2
+
+    # Part 1
+    # note single quote: we want to pass this command in its literal form
+    # to the remote machine (i.e. without evaluating $() in local machine)
+    echo "Kill port 8889 if already active...(enter password follow by Control + C to move to next part)"
+    ssh <USER>@<IPADDRESS> 'kill -9 $(lsof -t -i:8889); exit'
+    echo ""
+
+    # Part 2
+    echo "Activate environment ${envname} and initialize a Jupyter Lab session...(enter password follow by Control + C to move to next part)"
+    ssh <USER>@<IPADDRESS> "cd ${projectpath};
+                                source /home/pspenano/anaconda2/bin/activate ${envname};
+                                /home/pspenano/anaconda2/bin/conda env list;
+                                /home/pspenano/anaconda2/envs/${envname}/bin/jupyter lab --no-browser --port=8889; exit"
+    echo ""
+
+    # Part 3: bind remote port 8889 to local port 8887
+    echo "Bind remote port 8889 to local port 8887...(enter password then open new terminal window and execute jupybrowser)"
+    ssh -N -L localhost:8887:localhost:8889 pspenano@192.168.0.104
+}
+```
+
 Reference: https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
