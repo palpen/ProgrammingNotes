@@ -15,6 +15,20 @@ To use Keras, you must first install TensorFlow. If you are using a virtual envi
 
 To test the installation, just import keras. You should see a message stating that it is using the TensorFlow backend.
 
+### Using TensorFlow and Keras in a Jupyter Notebook
+When using the GPU version of TensorFlow and Keras, you might get the following error when trying to import the packages:
+
+`ImportError: libcudart.so.8.0: cannot open shared object file: No such file or directory jupyter notebook`
+
+To fix this, add the following at the top of your Jupyter notebook configuration file (named `jupyter_notebook_config.py` found in `$HOME/.jupyter`)
+
+```python
+import os
+c = get_config()
+os.environ['LD_LIBRARY_PATH'] = '/usr/local/cuda-8.0/lib64:usr/local/cuda-8.0/lib64/libcudart.so.8.0'
+c.Spawner.env.update('LD_LIBRARY_PATH')
+```
+
 ## Switch between GPU and CPU for training
 Set GPU to 0 below for no GPUs (e.g. use CPU only). Set to 1 and TensorFlow will automatically use the GPU.
 ```
