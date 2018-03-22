@@ -1,4 +1,4 @@
-# Notes and useful command in TensorFlow
+# Notes and useful command in TensorFlow and Keras
 
 ## Installation
 
