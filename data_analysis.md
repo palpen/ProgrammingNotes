@@ -1,6 +1,6 @@
 # Data Analysis Tricks
 
-## Given a dictionary of columns and their corresponding labels, create a nicely formatted summary statistic table
+### Given a dictionary of columns and their corresponding labels, create a nicely formatted summary statistic table
 ```python
 cols_labels = {'price_p1_var': 'Mean Avg. Variable Price - Period 1', 
                      'price_p2_var': 'Mean Avg. Variable Price - Period 2',
@@ -12,3 +12,7 @@ cols = [c for c in cols_labels.keys()]  # get column names
 price_desc = df[cols].describe().round(3).T  # create sum. stat. table
 price_desc.rename(index=cols_labels)  # replace column names with labels
 ```
+
+### Save figure created in IPython Notebook
+Place code below in same cell that creates the figure
+`plt.savefig('my_figure.pdf', bbox_inches='tight', dpi=400)`
