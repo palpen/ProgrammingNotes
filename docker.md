@@ -12,4 +12,5 @@
 	- `docker run --name <MY_CUSTOM_NAME> <DOCKER_IMAGE>`
 
 # Notes on Docker
+
 - the -it options run docker in interactive mode (i.e. it takes you inside and container and do stuff in it). Alternatively, you can run it in detached mode by using the -d option
