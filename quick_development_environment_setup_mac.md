@@ -11,6 +11,12 @@
 		- Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf
 	- !!! Sync bash aliases
 	- Set color to `Solarized Dark` (Profiles > Open Profiles > Default > Edit Profiles...> Colors tab > Color Presets... pull down)
+	- Customize prompt with nice colors (add to .bash_profile)
+		```
+			export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+			export CLICOLOR=1
+			export LSCOLORS="GxfxcxdxBxegecabagacad"
+		```
 3. __Install Anaconda__
 	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
 	- Then `source .bash_profile`
