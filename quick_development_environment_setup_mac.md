@@ -11,12 +11,7 @@
 		- Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf
 	- !!! Sync bash aliases
 	- Set color to `Solarized Dark` (Profiles > Open Profiles > Default > Edit Profiles...> Colors tab > Color Presets... pull down)
-	- Customize prompt with nice colors (add to .bash_profile)
-		```
-			export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
-			export CLICOLOR=1
-			export LSCOLORS="GxfxcxdxBxegecabagacad"
-		```
+	- Customize prompt with nice colors (see below)
 3. __Install Anaconda__
 	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
 	- Then `source .bash_profile`
@@ -27,3 +22,30 @@
 ## If Necessary
 
 1. __Install Docker__
+
+
+## A few useful things to add to .bash_profile
+```bash
+# added by Anaconda3 installer
+export PATH="/anaconda3/bin:$PATH"
+
+# customize prompt with nice colors
+export PS1="\W|☃︎ "
+export CLICOLOR=1
+export LSCOLORS="gxfxcxdxBxegecabagacad"
+
+# Use fzf copy directory path to clipboard
+# usage: cdf -> search directory or filename -> enter to copy directory to clipboard
+# tr -d '\n' before pbcopy removes next line character to avoid auto execution
+# in command line
+cdf() {
+   local file
+   local dir
+   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && echo "$dir" | tr -d '\n' | pbcopy
+}
+
+alias sub='open -a "/Applications/Sublime Text.app" '
+alias zzz='pmset sleepnow'
+```
+
+
