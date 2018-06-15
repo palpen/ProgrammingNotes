@@ -1,6 +1,6 @@
 
 ## SSH and Networking
-1. Copy contents of local directory to remote server:
+1. Copy the 'sourcedirectory' folder from local directory to 'remotedirectory' folder in the remote server:
     `scp -r ./sourcedirectory/ username@ipaddress:~/remotedirectory`
     * If copying individual files, remove the -r option (which enables recursive copying for directories)
 2. List all network open ports:
