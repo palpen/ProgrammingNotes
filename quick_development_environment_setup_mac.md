@@ -1,6 +1,6 @@
 # Quick Development Environment Setup on Mac
 
-
+## Can't live without
 1. __Install SublimeText__
 	- !!! Sync package set up with one at home
 	- Add alias to bash profile to open Sublime Text in command line
@@ -12,17 +12,26 @@
 	- !!! Sync bash aliases
 	- Set color to `Solarized Dark` (Profiles > Open Profiles > Default > Edit Profiles...> Colors tab > Color Presets... pull down)
 	- Customize prompt with nice colors (see below)
-3. __Install Anaconda__
+	3. __Install Anaconda__
 	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
 	- Then `source .bash_profile`
 	- To check, `which python` (`which` locates program file within user’s path) and should see `/anaconda3/bin/python`
 4. __Install Spectacle (Organize windows using shortcuts)__
 5. __Install XCode (includes important developer tools, like git)__
+6. __Install Google Chrome__
+	* Install Vimium
 
 ## If Necessary
-
 1. __Install Docker__
+2. __Install Dropbox__
 
+## Sublime Text 3 Configuration
+1. __Install Package Control__
+2. __Install GitGutter__
+3. __Install SideBarEnhancements__
+4. __Install SublimeLinter__ (does not include linter)
+	- Install SublimeLinter-pycodestyle (also in package control)
+5. __Install MarkdownPreview__
 
 ## A few useful things to add to .bash_profile
 ```bash
