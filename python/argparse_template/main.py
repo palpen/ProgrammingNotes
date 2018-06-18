@@ -1,6 +1,6 @@
 # see https://gitlab.decisionsciences.bns/mosaic/label-generation
 # how to use argparse with a json type configuration file
-# usage: python main.py config.json
+# usage: `python main.py config.json`
 
 import argparse
 import sys
