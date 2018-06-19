@@ -25,6 +25,9 @@
 1. __Install Docker__
 2. __Install Dropbox__
 
+## Useful, but not necessary
+1. [__Install Honer__](https://github.com/puffnfresh/Honer.app)
+
 ## Sublime Text 3 Configuration
 1. __Install Package Control__
 2. __Install GitGutter__
