@@ -35,6 +35,9 @@
 4. __Install SublimeLinter__ (does not include linter)
 	- Install SublimeLinter-pycodestyle (also in package control)
 5. __Install MarkdownPreview__
+6. __Install PEP8 Autoformat__
+7. __Install TrailingSpaces__ (highlight and remove trailing spaces)
+8. __Install Git__ ([this one](https://github.com/kemayo/sublime-text-git))
 
 ## A few useful things to add to .bash_profile
 ```bash
