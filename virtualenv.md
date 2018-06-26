@@ -17,6 +17,23 @@
 - `cdvirtualenv`: cd into the root of the current virtualenv
 - `deactivate`: deactivate virtualenv, which calls several hooks
 
+## Installing from requirements.txt file
+- requirements.txt contain libraries needed for project
+- Example contents without version specifiers
+```
+nose
+nose-cov
+beautifulsoup4
+```
+- Example with version specifiers
+```
+docopt == 0.6.1             # Version Matching. Must be version 0.6.1
+keyring >= 4.1.1            # Minimum version 4.1.1
+coverage != 3.5             # Version Exclusion. Anything except version 3.5
+Mopidy-Dirble ~= 1.1        # Compatible release. Same as >= 1.1, == 1.*
+```
+- Command to install from requirements `pip install -r requirements.txt`
+
 ## Check if inside a virtual environment
 `python -c 'import sys; print("In virtuaenv" if hasattr(sys, "real_prefix") else "Not in virtenv")'`
 - reference: https://stackoverflow.com/questions/15454174/how-can-a-shell-function-know-if-it-is-running-within-a-virtualenv
