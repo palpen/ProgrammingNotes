@@ -39,13 +39,28 @@
 7. __Install TrailingSpaces__ (highlight and remove trailing spaces)
 8. __Install Git__ ([this one](https://github.com/kemayo/sublime-text-git))
 
+### Things to add to user preferences
+* Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
+```json
+{
+	"font_size": 14,
+	"ignored_packages":
+	[
+	],
+	"translate_tabs_to_spaces": true
+}
+```
+
 ## A few useful things to add to .bash_profile
 ```bash
 # added by Anaconda3 installer
 export PATH="/anaconda3/bin:$PATH"
 
 # customize prompt with nice colors
-export PS1="\W|☃︎ "
+# discussion of colors: https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
+# Color tag comes in the form of \[\033[COLORm\], where COLOR is a number
+# for the color of the foreground text (e.g. 30==Black, 36==Cyan)
+export PS1="\[\033[32m\]\W|\[\033[30m\]☃︎ "
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxBxegecabagacad"
 

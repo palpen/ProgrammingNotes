@@ -1,5 +1,12 @@
 # Notes on Flask
 
+## How to define a route
+```python
+@app.route('user/<username>')
+def profile(username):
+    print(f"Username is {username}")
+```
+
 ## How to run application in debugger mode
 Export the `FLASK_DEBUG` environmental variable (after exporting `FLASK_APP` before executing `flask run`
 
