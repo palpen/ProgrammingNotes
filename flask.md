@@ -4,7 +4,15 @@
 ```python
 @app.route('user/<username>')
 def profile(username):
-    print(f"Username is {username}")
+    return f"Username is {username}"
+```
+
+When this app is running, executing `curl http://127.0.0.1:5000/user/johnsmith` will return "Username is johnsmith". To filter by type before passing into the view function
+
+```python
+@app.route('user/id/<int:user_id>')
+def profile(user_id):
+    return f"The user id is {user_id}"
 ```
 
 ## How to run application in debugger mode
