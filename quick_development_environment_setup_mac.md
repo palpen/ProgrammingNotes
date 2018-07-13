@@ -38,6 +38,8 @@
 6. __Install PEP8 Autoformat__
 7. __Install TrailingSpaces__ (highlight and remove trailing spaces)
 8. __Install Git__ ([this one](https://github.com/kemayo/sublime-text-git))
+9. Create a symbolic link from Sublime Text CLI to /usr/local/bin/sub
+	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
