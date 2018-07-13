@@ -1,6 +1,6 @@
 # Useful Docker commands
 
-1. Active docker containers: `docker ps`
+1. List active docker containers: `docker ps`
 2. Open multiple terminals on a docker container: `docker exec -it <container name> bash`
 	- You can get container name from `docker ps`
 3. How to get access to data in the host from inside a container
@@ -11,6 +11,10 @@
 	- `docker run --name <MY_CUSTOM_NAME> <DOCKER_IMAGE>`
 5. How to exit docker container in interactive mode
 	- Just type `exit`
+6. Delete image by image id: `docker rmi <IMAGE ID>`
+7. List all images: `docker images`
+8. List all containers: `docker ps`
+9. Kill an active container: `docker kill <CONTAINER ID>`
 
 # Notes on Docker
 
