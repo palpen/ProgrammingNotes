@@ -1,4 +1,17 @@
 
+## Basic Operations
+1. Declare an array and loop through its contents
+```bash
+declare -a arr=("e1" "e2" "e3")
+
+for i in "${arr[@]}"
+do
+    echo "$i"
+done
+```
+Note arr[0] corresponds to the element "e1". Using @ (or \*), expands the contents of the array, allowing us to use it as an object to iterate over.
+
+
 ## SSH and Networking
 1. Copy the `sourcedirectory` folder from local directory to `remotedirectory` folder in the remote server:
     `scp -r ./sourcedirectory/ username@ipaddress:~/remotedirectory`
