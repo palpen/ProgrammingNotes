@@ -1,10 +1,8 @@
-# Notes, templates, and techniques on the Python programming language
+# Notes, templates, and techniques for Python
 
+## Templates 
 
-## Template for argparse
-
-
-## Basic template for functions decorators
+1. Creating function decorators
 ```python
 def my_decorator(my_function):
     def wrapper(x):
@@ -29,12 +27,20 @@ def my_function():
 my_function("arg")
 ```
 
-## How to create n equal sized chunks from a list
+2. Template for argparse
+???
+
+3. Template for pytest
+???
+
+## Misc. Techniques
+1. How to create n equal-sized subsets of a list
 ```python
-def make_chunks(num_chunks):
+def make_chunks(num_chunks):``
     chunks = []
     for i in range(num_chunks):
         file_chunks = proc_files[i::num_chunks]
         chunks.append(file_chunks)
     return chunks
 ```
+
