@@ -28,3 +28,13 @@ def my_function():
 
 my_function("arg")
 ```
+
+## How to create n equal sized chunks from a list
+```python
+def make_chunks(num_chunks):
+    chunks = []
+    for i in range(num_chunks):
+        file_chunks = proc_files[i::num_chunks]
+        chunks.append(file_chunks)
+    return chunks
+```
