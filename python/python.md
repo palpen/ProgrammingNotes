@@ -36,10 +36,10 @@ my_function("arg")
 ## Misc. Techniques
 1. How to create n equal-sized subsets of a list
 ```python
-def make_chunks(num_chunks):``
+def make_chunks(l, num_chunks):``
     chunks = []
     for i in range(num_chunks):
-        file_chunks = proc_files[i::num_chunks]
+        file_chunks = l[i::num_chunks]
         chunks.append(file_chunks)
     return chunks
 ```
