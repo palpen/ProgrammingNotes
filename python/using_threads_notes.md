@@ -33,7 +33,7 @@ def chunk_processor(chunk: List[str], store: Dict=None):
 
 The `api_call` function is some function that makes an API call on `file`. `file` could be a file containing spoken text and `api_call` makes an API call to some service that calculates the sentiment score of the spoken text in `file`. Once the function is finished iterating through each file in `chunk`, we return the dictionary, `store`.
 
-3. Threading happends in the script below
+3. Threading happens in the script below
 ```python
 store = {}
 threads = []
