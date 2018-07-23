@@ -44,3 +44,22 @@ def make_chunks(l, num_chunks):``
     return chunks
 ```
 
+2. How to load and append a collection of json files into one dataframe
+```python
+import pandas as pd
+import json
+
+appended_data = []
+files = p.glob("myfiles_*.json")
+
+for infile in files:
+
+    with open(infile, 'r') as f:
+        json_data = json.load(f)
+
+    df_data = pd.DataFrame(json_data)
+    df_data = df_data.T.sort_index()
+    appended_data.append(df_data)
+
+df = pd.concat(appended_data, axis=0)
+```
