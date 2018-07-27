@@ -33,6 +33,16 @@ my_function("arg")
 3. Template for pytest
 ???
 
+4. How to set up logging using the `logging` module
+Near the top of your script, add
+```python
+import logging
+logging.basicConfig(filename="mylogfile.log", level=logging.DEBUG)
+
+# Rest of script goes here
+```
+[Source](https://www.digitalocean.com/community/tutorials/how-to-use-logging-in-python-3)
+
 ## Misc. Techniques
 1. How to create n equal-sized subsets of a list
 ```python
