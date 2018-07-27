@@ -1,3 +1,11 @@
+# Getting Started
+
+1. Run bash in a container in interactive mode:
+Say you have the `ubuntu` image (check with `docker image`). To access bash in its container in interactive mode, run
+```bash
+docker run -i -t ubuntu bash
+```
+
 # Useful Docker commands
 
 1. List active docker containers: `docker ps`
