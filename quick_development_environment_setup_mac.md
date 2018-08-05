@@ -80,4 +80,8 @@ alias sub='open -a "/Applications/Sublime Text.app" '
 alias zzz='pmset sleepnow'
 ```
 
+## Miscellaneous settings
+* Prevent switching deskstop spaces when switching to an application
+	- Go to System Preferences > Mission Control, deselect "When switching to an application, switch to a Space with open windows for the application"
+
 
