@@ -97,3 +97,13 @@ This way, you let conda deal with the dependencies required for each of these pa
 - https://github.com/conda/conda/tree/master/conda_env
 
 Reference: https://conda.io/docs/user-guide/tasks/manage-environments.html
+
+### How to pip install packages in an environment.yml file
+In `environment.yml` file, do the following:
+```
+name: toxic_comment_kaggle
+dependencies:
+  - pip
+  - pip:
+    - flask_restplus
+```
