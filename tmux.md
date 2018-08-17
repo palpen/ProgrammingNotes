@@ -26,7 +26,7 @@ followed by the key for the desired action
 
 ### Sessions
 ```
-s --> list sessions
+s list sessions
 ```
 
 ### Windows (tabs)
@@ -37,7 +37,9 @@ s --> list sessions
 % vertical split
 " horizontal split
 
-z zoom in current active pane
+z toggle zoom in current active pane
+
+→, ←, ↑, ↓ move between panes
 ```
 
 ## Good Reference
