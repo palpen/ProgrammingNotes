@@ -55,8 +55,8 @@ Note arr[0] corresponds to the element "e1". Using @ (or \*), expands the conten
         to=txt     #  Change the .text suffix to .txt
 
         find . -type f -name "*.$from" -exec sh -c 'mv "$3" "${3%.$1}.$2"' sh "$from" "$to" {} ';'
+        # Copied from https://unix.stackexchange.com/a/389706/87545
         ```
-            - Copied from https://unix.stackexchange.com/a/389706/87545
         - Good references
             - https://unix.stackexchange.com/a/156010/87545
 
