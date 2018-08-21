@@ -23,21 +23,42 @@ Note arr[0] corresponds to the element "e1". Using @ (or \*), expands the conten
     * See https://stackoverflow.com/questions/13322485/how-to-get-the-primary-ip-address-of-the-local-machine-on-linux-and-os-x
 
 ## Exploring and Manipulating Directories
-1.  Get size of directory:
+1.  Storage usage information for directory:
     `du -h your_directory`
-    * du: estimate file space usage; -h option is for human readable output
+    * du: estimate file space usage; `-h` option is for human readable output
+    * Use `-s` option for total for directory
 
-2. Create a symbolic link:
+2. Get free disk space information for directory: `df .`
+
+3. Create a symbolic link:
     `ln -s /path/to/original/directory/or/file name_of_link`
     * This creates a "folder" named `name_of_link` that you can use to access contents of `/path/to/original/directory/or/file`
     * To destroy the link, `rm name_of_link`
 
-3. `cd`, `pushd`, `popd`, and `dirs -v`
+4. `cd`, `pushd`, `popd`, and `dirs -v`
     * Say you have several directories you need to navigate over. To navigate to and "save" the directories in a directory stack, `pushd mydir`
     * To see directories in current stack: `dirs -v`
     * To navigate to a directory in the current stack: `cd ~DIR_NUM` where `DIR_NUM` is the number assigned to directory you want to go to
     * You must always save the most recent folder in the stack twice as the folder assigned to zero will always be replaced
     * See https://unix.stackexchange.com/a/270437/87545 for details
+
+5. How to use `find` with `-exec` option
+    * `find . -name "*.log" -exec echo {} \;`
+        - Searches current directory for files matching `*.log` and passes each file name as an argument to `echo`
+        - Replacing `\;` with `+` will, instead, pass as many of the parameters as possible to `echo`
+    * Using child shell, `sh -c`, with `find` and `-exec`
+        - To pass argument to child shell: `sh -c 'echo  "You gave me $1, thanks!"' sh "apples"`
+        - The second `sh` goes to `$0` and will be used in the shell's error message
+        - To use together to change the extension of files in `.` from `.text` to `.txt`
+        ```bash
+        from=text  #  Find files that have names like something.text
+        to=txt     #  Change the .text suffix to .txt
+
+        find . -type f -name "*.$from" -exec sh -c 'mv "$3" "${3%.$1}.$2"' sh "$from" "$to" {} ';'
+        ```
+            - Copied from https://unix.stackexchange.com/a/389706/87545
+        - Good references
+            - https://unix.stackexchange.com/a/156010/87545
 
 ## System stuff
 1. Check if drive is mounted: `lsblk`
