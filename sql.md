@@ -1,5 +1,11 @@
 # Notes on SQL commands
 
+# Basic SQL Queries
+
+* Count number of rows that satisfy condition
+    - `SELECT COUNT(*) FROM table_name WHERE field_name > 0`
+
+
 ## SQLite
 
 ### Open a .db file in terminal
