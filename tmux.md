@@ -38,6 +38,7 @@ s list sessions
 " horizontal split
 
 z toggle zoom in current active pane
+x kill (close) pane
 
 →, ←, ↑, ↓ move between panes
 ```
