@@ -79,6 +79,10 @@ cdf() {
 alias sub='open -a "/Applications/Sublime Text.app" '
 alias zzz='pmset sleepnow'
 ```
+## Useful Command Line Tools
+1. `man` replacement: [tldr](https://tldr.sh/#installation)
+2. `find` replacement: [fd](https://github.com/sharkdp/fd/)
+3. Others: https://remysharp.com/2018/08/23/cli-improved
 
 ## Miscellaneous settings
 * Prevent switching deskstop spaces when switching to an application
