@@ -18,15 +18,19 @@ Start a new tmux session:
 
 ## Shortcuts
 
-Before any of the shortcuts below, hit the prefix
+Before any of the single character shortcuts below, hit the prefix
 
 __Control + b__
 
-followed by the key for the desired action
+followed by the key for the desired action.
+
+>> means just execute command (no need to Control + b)
 
 ### Sessions
 ```
 s list sessions
+d detach/leave from session
+>> tmux attach: attach to tmux session 
 ```
 
 ### Windows (tabs)
