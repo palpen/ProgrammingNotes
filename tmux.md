@@ -24,7 +24,7 @@ __Control + b__
 
 followed by the key for the desired action.
 
->> means just execute command (no need to Control + b)
+\>\> means just execute command (no need to Control + b)
 
 ### Sessions
 ```
