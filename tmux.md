@@ -45,6 +45,9 @@ z toggle zoom in current active pane
 x kill (close) pane
 
 →, ←, ↑, ↓ move between panes
+
+[ Scroll in pane 
+  \> Use arrow keys to move in pane or fn + arrow key to skip a page
 ```
 
 ## Good Reference
