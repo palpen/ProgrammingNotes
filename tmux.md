@@ -47,7 +47,7 @@ x kill (close) pane
 →, ←, ↑, ↓ move between panes
 
 [ Scroll in pane 
-  \> Use arrow keys to move in pane or fn + arrow key to skip a page
+    * Use arrow keys to move in pane or fn + arrow key to skip a page
 ```
 
 ## Good Reference
