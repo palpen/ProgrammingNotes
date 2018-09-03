@@ -10,3 +10,9 @@ What is POSIX?
 * POSIX is an abbreviation of Portable Operating System Interface. There are a wide variety of UNIX implementations, which made porting applications across systems very difficult. POSIX is a set of standards developed to alleviate this problem. The macOS, for example, is a POSIX compliant operating system.
 
 ## 2. Fundamental Concepts
+
+What is an operating system
+
+What is a kernel? How is it different from an operating system?
+
+What is a shell?
