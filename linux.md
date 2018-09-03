@@ -11,7 +11,7 @@ What is POSIX?
 
 ## 2. Fundamental Concepts
 
-What is an operating system
+What is an operating system?
 
 What is a kernel? How is it different from an operating system?
 
