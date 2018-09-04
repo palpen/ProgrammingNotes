@@ -75,3 +75,37 @@ for infile in files:
 
 df = pd.concat(appended_data, axis=0)
 ```
+
+3. Understanding the `sorted` function and how it sorts dictionary keys by value
+
+`sorted` returns a new sorted list from the items in iterable.
+
+Any iterable is acceptable (e.g. sequences such as strings or lists or collections such as sets or dictionaries)
+
+If you try to sort a dictionary, it will sort by its keys and return a list containing the sorted keys
+
+```
+>>>> sample_dict = {0: 'b', 1: 'a', 2: 'c'}
+>>> sorted(sample_dict)
+>>> [0, 1, 2]
+```
+
+By default, passing a dictionary into `sorted` will always return the keys.
+
+If you want to sort by the values of the dictionary, you need to pass a function to the key argument in `sorted` the input of which will be the items in the iterable (if its a dictionary, then the input will be its keys):
+
+```
+>>> sorted(sample_dict, key=sample_dict.get)
+>>> [1, 0, 2]
+```
+
+In this case, the input to `sample_dict.get()` are the keys of sample_dict. `sample_dict.get()` returns the value given a key. This, in effect, will sort the output of `sorted` by sample_dict's values but return the keys
+
+If you want to sort by values and return the sorted values themselves, do
+
+```
+>>> sorted(sample_dict.values())
+>>> ['a', 'b', 'c']
+```
+
+
