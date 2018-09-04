@@ -92,7 +92,7 @@ If you try to sort a dictionary, it will sort by its keys and return a list cont
 
 By default, passing a dictionary into `sorted` will always return the keys.
 
-If you want to sort by the values of the dictionary, you need to pass a function to the key argument in `sorted` the input of which will be the items in the iterable (if its a dictionary, then the input will be its keys):
+If you want to sort by the values of the dictionary, you need to pass a function to the key argument in `sorted` the input of which will be the items in the iterable (if its a dictionary, then the input to this function will be its keys):
 
 ```
 >>> sorted(sample_dict, key=sample_dict.get)
