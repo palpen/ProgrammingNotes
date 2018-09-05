@@ -1,3 +1,11 @@
+# Notes on Docker
+
+# Concepts
+* "A Docker __image__ is an executable package that includes everything needed to run an application---the code, a runtime, libraries, environment variables, and config files"
+* A __container__ is a runtime instance of an image (an image with state or a user process). Use `docker ps` to see a list of running containers
+* "__containers__ runs natively on Linux and shares the kernel of the host machine with other containers"
+* A __virtual machine__ on the other hand runs a full-blown guest operating system with virtual access to the host computer's resources through a hypervisor. VMs demand more resource than what is needed by a given application that can be run in a container.
+
 # Getting Started
 
 1. Run bash in a container in interactive mode:
@@ -24,6 +32,8 @@ docker run -i -t ubuntu bash
 8. List all containers: `docker ps`
 9. Kill an active container: `docker kill <CONTAINER ID>`
 
-# Notes on Docker
+# Dockerfile
+
+# Additional Notes and Features
 
 - the -it options run docker in interactive mode (i.e. it takes you inside and container and do stuff in it). Alternatively, you can run it in detached mode by using the -d option
