@@ -34,6 +34,7 @@ docker run -i -t ubuntu bash
 9. Kill an active container: `docker kill <CONTAINER ID>`
 
 # Dockerfile
+See docker_fun repository for an example using a Ubuntu base image
 
 # Additional Notes and Features
 
