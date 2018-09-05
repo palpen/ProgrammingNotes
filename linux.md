@@ -2,6 +2,8 @@
 
 Notes from the book "The Linux Programming Interface" by Michael Kerrisk.
 
+See the docker_fun repository for Dockerfile that builds a simple Ubuntu image with basic tools
+
 ## 1. History
 What is Linux?
 * The kernel for the UNIX system developed by the GNU project. The kernel was written by a really smart Finnish guy named Linus Torvalds
