@@ -2,7 +2,7 @@
 
 Notes from the book "The Linux Programming Interface" by Michael Kerrisk.
 
-See the docker_fun repository for Dockerfile that builds a simple Ubuntu image with basic tools
+See the docker_fun repository for a Dockerfile that builds a simple Ubuntu image with basic tools
 
 ## 1. History
 What is Linux?
