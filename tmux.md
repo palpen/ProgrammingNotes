@@ -50,6 +50,12 @@ x kill (close) pane
     * Use arrow keys to move in pane or fn + arrow key to skip a page
 ```
 
+## Useful scripts
+* Create new session, split panes, and cd into desired directory for each pane
+```
+tmux new-session \; split-window -h -c ~/path/to/dir1 \; split-window -v -c ~/path/to/dir2 \; attach
+```
+
 ## Good Reference
 * https://gist.github.com/MohamedAlaa/2961058
 
