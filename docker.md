@@ -5,6 +5,7 @@
 * A __container__ is a runtime instance of an image (an image with state or a user process). Use `docker ps` to see a list of running containers
 * "__containers__ runs natively on Linux and shares the kernel of the host machine with other containers"
 * A __virtual machine__ on the other hand runs a full-blown guest operating system with virtual access to the host computer's resources through a hypervisor. VMs demand more resource than what is needed by a given application that can be run in a container.
+* See https://docs.docker.com/get-started/ for more details
 
 # Getting Started
 
