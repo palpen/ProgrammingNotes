@@ -29,7 +29,7 @@
 1. Install Package Control
 2. Install GitGutter
 3. Install SideBarEnhancements
-4. Install SublimeLinter__ (does not include linter)
+4. Install SublimeLinter (does not include linter)
 	- Install SublimeLinter-pycodestyle (also in package control)
 5. Install MarkdownPreview
 6. Install PEP8 Autoformat
