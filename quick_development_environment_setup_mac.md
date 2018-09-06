@@ -39,9 +39,6 @@
 	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 10. Install [MaxPane](https://github.com/jisaacks/MaxPane): Toggle pane zoom
 
-## Useful, but not necessary
-1. [__Install Honer__](https://github.com/puffnfresh/Honer.app)
-
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
 ```json
@@ -53,6 +50,9 @@
 	"translate_tabs_to_spaces": true
 }
 ```
+
+## Useful, but not necessary
+1. [__Install Honer__](https://github.com/puffnfresh/Honer.app)
 
 ## A few useful things to add to .bash_profile
 ```bash
