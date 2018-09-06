@@ -25,21 +25,22 @@
 1. __Install Docker__
 2. __Install Dropbox__
 
-## Useful, but not necessary
-1. [__Install Honer__](https://github.com/puffnfresh/Honer.app)
-
 ## Sublime Text 3 Configuration
-1. __Install Package Control__
-2. __Install GitGutter__
-3. __Install SideBarEnhancements__
-4. __Install SublimeLinter__ (does not include linter)
+1. Install Package Control
+2. Install GitGutter
+3. Install SideBarEnhancements
+4. Install SublimeLinter__ (does not include linter)
 	- Install SublimeLinter-pycodestyle (also in package control)
-5. __Install MarkdownPreview__
-6. __Install PEP8 Autoformat__
-7. __Install TrailingSpaces__ (highlight and remove trailing spaces)
-8. __Install Git__ ([this one](https://github.com/kemayo/sublime-text-git))
+5. Install MarkdownPreview
+6. Install PEP8 Autoformat
+7. Install TrailingSpaces (highlight and remove trailing spaces)
+8. Install Git ([this one](https://github.com/kemayo/sublime-text-git))
 9. Create a symbolic link from Sublime Text CLI to /usr/local/bin/sub
 	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+10. Install [MaxPane](https://github.com/jisaacks/MaxPane): Toggle pane zoom
+
+## Useful, but not necessary
+1. [__Install Honer__](https://github.com/puffnfresh/Honer.app)
 
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
