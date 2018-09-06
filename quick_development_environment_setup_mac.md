@@ -12,8 +12,8 @@
 	- !!! Sync bash aliases
 	- Set color to `Solarized Dark` (Profiles > Open Profiles > Default > Edit Profiles...> Colors tab > Color Presets... pull down)
 	- Customize prompt with nice colors (see below)
-	3. __Install Anaconda__
-	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
+3. __Install Anaconda__
+    	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
 	- Then `source .bash_profile`
 	- To check, `which python` (`which` locates program file within user’s path) and should see `/anaconda3/bin/python`
 4. __Install Spectacle (Organize windows using shortcuts)__
