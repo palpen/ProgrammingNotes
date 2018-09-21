@@ -14,6 +14,6 @@ class TestClass(object):
 Here are the different commands you can use in pytest:
 
 1. Run tests and show % of tests passed: `pytest main_test.py`
-2. Run tests but with verbose output: `pytest -v main_test.py`
-3. Run tests but print out output to stdout: `pytest -v main_test.py -s`
-4. Run only the test in test_func_1: `pytest -v exploration_test.py::TestClass::test_func_1 -s`
+2. ...include verbose output: `pytest -v main_test.py`
+3. ...include verbose output and print out output to stdout: `pytest -v main_test.py -s`
+4. ...do 1.,2., and 3. but only the test in test_func_1: `pytest -v exploration_test.py::TestClass::test_func_1 -s`
