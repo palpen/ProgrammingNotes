@@ -44,9 +44,15 @@ Notes on logging:
 
 4. Basic regular expression
 ```python
+import re
+
 pattern = r'([qQ][0-9])\s([0-9]+)\s([a-zA-z\s]+)'
 prog = re.compile(pattern)
 result = prog.match(string)
+
+print(result[1])
+print(result[2])
+print(result[3])
 ```
 
 ## Misc. Techniques
