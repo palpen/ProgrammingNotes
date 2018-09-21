@@ -2,7 +2,7 @@
 
 ## Basic command for running test
 
-Suppose your test file named `main_test.py` looks like this
+Suppose your test file named `main_test.py` contains the following
 ```python
 class TestClass(object):
     def test_func_1(self):
