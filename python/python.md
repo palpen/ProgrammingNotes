@@ -30,10 +30,7 @@ my_function("arg")
 2. Template for argparse
 ???
 
-3. Template for pytest
-???
-
-4. How to set up logging using the `logging` module
+3. How to set up logging using the `logging` module
 Near the top of your script, add
 ```python
 import logging
@@ -44,6 +41,13 @@ logging.basicConfig(filename="mylogfile.log", level=logging.DEBUG)
 Notes on logging:
 1. https://www.digitalocean.com/community/tutorials/how-to-use-logging-in-python-3
 2. https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/
+
+4. Basic regular expression
+```python
+pattern = r'([qQ][0-9])\s([0-9]+)\s([a-zA-z\s]+)'
+prog = re.compile(pattern)
+result = prog.match(string)
+```
 
 ## Misc. Techniques
 1. How to create n equal-sized subsets of a list
