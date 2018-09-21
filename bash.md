@@ -41,8 +41,11 @@ Note arr[0] corresponds to the element "e1". Using @ (or \*), expands the conten
     * To navigate to a directory in the current stack: `cd ~DIR_NUM` where `DIR_NUM` is the number assigned to directory you want to go to
     * You must always save the most recent folder in the stack twice as the folder assigned to zero will always be replaced
     * See https://unix.stackexchange.com/a/270437/87545 for details
+    
+5. How to use `find` to list only files following a given pattern
+    * `find . -name "*Pattern*"`
 
-5. How to use `find` with `-exec` option
+6. How to use `find` with `-exec` option
     * `find . -name "*.log" -exec echo {} \;`
         - Searches current directory for files matching `*.log` and passes each file name as an argument to `echo`
         - Replacing `\;` with `+` will, instead, pass as many of the parameters as possible to `echo`
