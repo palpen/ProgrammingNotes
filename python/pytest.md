@@ -17,4 +17,5 @@ Here are the different commands you can use in pytest:
 2. ...include verbose output: `pytest -v main_test.py`
 3. ...include verbose output and print out output to stdout: `pytest -v main_test.py -s`
 4. ...do 1., 2., and 3. but only for the test in `test_func_1`: 
-    `pytest -v exploration_test.py::TestClass::test_func_1 -s`
+   
+   `pytest -v exploration_test.py::TestClass::test_func_1 -s`
