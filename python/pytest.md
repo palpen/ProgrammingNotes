@@ -11,7 +11,7 @@ class TestClass(object):
     def test_func_2(self):
         print("Testing test_func_2!")
 ```
-Here are the different commands you can run to using pytest (in increasing level of command options):
+Here are the different commands you can use in pytest:
 
 1. Run tests and show % of tests passed: `pytest main_test.py`
 2. Run tests but with verbose output: `pytest -v main_test.py`
