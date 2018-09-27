@@ -38,6 +38,7 @@
 9. Create a symbolic link from Sublime Text CLI to /usr/local/bin/sub
 	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 10. Install [MaxPane](https://github.com/jisaacks/MaxPane): Toggle pane zoom
+11. Install [AceJump](https://github.com/ice9js/ace-jump-sublime): Move cursor to any character on screen
 
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
