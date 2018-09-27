@@ -37,7 +37,7 @@
 8. Install Git ([this one](https://github.com/kemayo/sublime-text-git))
 9. Create a symbolic link from Sublime Text CLI to /usr/local/bin/sub
 	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
-10. Install [MaxPane](https://github.com/jisaacks/MaxPane): Toggle pane zoom
+10. Install [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
 11. Install [AceJump](https://github.com/ice9js/ace-jump-sublime): Move cursor to any character on screen
 
 ### Things to add to user preferences
