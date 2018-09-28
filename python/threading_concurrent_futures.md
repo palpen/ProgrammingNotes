@@ -3,7 +3,7 @@
 The code below shows
 
 - Multithreading using the `ThreadPoolExecutor` class from the `concurrent.futures` library
-- Display progress meter using the tqdm library
+- Display progress meter using the `tqdm` library
 
 The first approach--using functions `f` and `run`--executes the task and consumes the results only after __all__ the threads are finished processing their inputs
 
