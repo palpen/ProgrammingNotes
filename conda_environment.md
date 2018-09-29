@@ -3,9 +3,9 @@
 ### Create an environment using python version 3.7
 ```shell
 # create
-> conda create -n ENVIRONMENT_NAME python=3.7
+conda create -n ENVIRONMENT_NAME python=3.7
 # activate
-> source activate ENVIRONMENT_NAME
+source activate ENVIRONMENT_NAME
 ```
 
 ### How to create a new environment and open an ipython notebook in it
