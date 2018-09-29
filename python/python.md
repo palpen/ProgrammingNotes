@@ -27,8 +27,7 @@ def my_function():
 my_function("arg")
 ```
 
-2. Template for argparse
-???
+2. Template for argparse: see `argparse_template` subdirectory
 
 3. How to set up logging using the `logging` module
 Near the top of your script, add
