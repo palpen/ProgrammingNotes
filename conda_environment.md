@@ -1,4 +1,9 @@
-## Virtual environments using conda
+# Virtual environments using conda
+
+### Create an environment using python version 3.7
+```shell
+conda create -n MY_NEW_ENVIRONMENT python=3.7
+```
 
 ### How to create a new environment and open an ipython notebook in it
 - Create a virtual environment using python 2.7 and install some packages
