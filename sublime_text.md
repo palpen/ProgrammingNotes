@@ -8,7 +8,7 @@
 Found in `Preferences.sublime-settings -- User`
 ```json
 {
-	"auto_complete": false,
+	"auto_complete": true,
 	"caret_style": "wide",
 	"font_size": 15,
 	"highlight_line": true,
