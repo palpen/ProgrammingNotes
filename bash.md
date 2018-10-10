@@ -11,6 +11,13 @@ done
 ```
 Note arr[0] corresponds to the element "e1". Using @ (or \*), expands the contents of the array, allowing us to use it as an object to iterate over.
 
+## Background Processes
+See: https://www.blockloop.io/mastering-bash-and-terminal/
+1. ctrl-z - move the current process to the background in a suspended state.
+2. jobs -l - list the current background processes for the current tty session.
+3. bg - tell the most recent background process to continue running in the background
+4. fg - bring the most recent background process back to the foreground
+5. disown -h - disown the most recent background job. This will remove it from your current tty session. It will not be able to be brought back to the foreground. You will have to control it either with kill or something else.
 
 ## SSH and Networking
 1. Copy the `sourcedirectory` folder from local directory to `remotedirectory` folder in the remote server:
