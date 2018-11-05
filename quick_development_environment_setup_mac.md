@@ -64,9 +64,11 @@ export PATH="/anaconda3/bin:$PATH"
 # discussion of colors: https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
 # Color tag comes in the form of \[\033[COLORm\], where COLOR is a number
 # for the color of the foreground text (e.g. 30==Black, 36==Cyan)
-export PS1='\[\033[1;32m\]\W:\[\033[1;34m\]'
+export PS1='\t \[\033[1;32m\]\W:\[\033[1;34m\]'
+# export PS1='\t \[\033[32m\]\W\[\033[30m\]☆'  # alternative
 export CLICOLOR=1
 export LSCOLORS=Fxfxcxdxbxegedabagacad
+export HISTCONTROL=ignoreboth:erasedups  # no duplicates in history
 
 # Use fzf copy directory path to clipboard
 # usage: cdf -> search directory or filename -> enter to copy directory to clipboard
