@@ -48,7 +48,7 @@ See: https://www.blockloop.io/mastering-bash-and-terminal/
     * To navigate to a directory in the current stack: `cd ~DIR_NUM` where `DIR_NUM` is the number assigned to directory you want to go to
     * You must always save the most recent folder in the stack twice as the folder assigned to zero will always be replaced
     * See https://unix.stackexchange.com/a/270437/87545 for details
-    
+
 5. How to use `find` to list only files following a given pattern
     * `find . -name "*Pattern*"`
 
@@ -72,7 +72,7 @@ See: https://www.blockloop.io/mastering-bash-and-terminal/
 
 7. Search all files in directory that containg a given pattern. List the output.
     * `grep -rnw "." -e 'pattern'`
-    * `-r` is to do a recursive search, `-n` is to display line number in which pattern appears, `-w` to match only complete words 
+    * `-r` is to do a recursive search, `-n` is to display line number in which pattern appears, `-w` to match only complete words
 
 ## System stuff
 1. Check if drive is mounted: `lsblk`
