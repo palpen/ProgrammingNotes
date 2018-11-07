@@ -70,6 +70,10 @@ See: https://www.blockloop.io/mastering-bash-and-terminal/
         - Good references
             - https://unix.stackexchange.com/a/156010/87545
 
+7. Search all files in directory that containg a given pattern. List the output.
+    * `grep -rnw "." -e 'pattern'`
+    * `-r` is to do a recursive search, `-n` is to display line number in which pattern appears, `-w` to match only complete words 
+
 ## System stuff
 1. Check if drive is mounted: `lsblk`
     * If it doesn't have a mount point it is not mounted. To mount it, execute `udisksctl mount -b /dev/sdb1`  where `/dev/sdb1` is the disk you want to mount
