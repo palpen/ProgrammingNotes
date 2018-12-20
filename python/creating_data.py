@@ -1,5 +1,8 @@
 '''
-Creating play data in pandas for testing
+Quickly create play data in pandas for testing
+
+Just copy and paste the desired data set in your REPL
+to quickly generate the data you want to play with
 
 For a richer set of play data, see pandas.util.testing
 e.g.
@@ -20,23 +23,23 @@ data = {
 df = pd.DataFrame(data)
 
 # Random integers
-data = np.random.randint(low=0, high=10, size=(5, 5))
+data = np.random.randint(low=0, high=10, size=(15, 5))
 df = pd.DataFrame(data)
 
 # Random floats
-data = np.random.random_sample(size=(5, 5))
+data = np.random.random_sample(size=(15, 5))
 df = pd.DataFrame(data)
 
 # Random floats with columns
-data = np.random.random_sample(size=(5, 5))
+data = np.random.random_sample(size=(15, 5))
 df = pd.DataFrame(data, columns=['a', 'b', 'c', 'd', 'e'])
 
 # Random strings
 def random_hexstr():
     '''Hex string'''
     return f"{random.randrange(3**30): 02X}".strip()
-ta
-data = [random_hexstr() for _ in range(5)]
+
+data = [random_hexstr() for _ in range(15)]
 df = pd.DataFrame(data)
 
 # Date data (dtype = datetime64[ns])
@@ -56,7 +59,13 @@ data[data > 0.3] = np.nan
 df = pd.DataFrame(data)
 
 # Random missing strings
-# !!!
+def random_hexstr():
+    '''Hex string'''
+    return f"{random.randrange(3**30): 02X}".strip()
+
+data = [random_hexstr() for _ in range(15)]
+df = pd.DataFrame(data)
+df.iloc[df.sample(frac=0.3).index, 0] = np.nan
 
 # Ints, floats, strings, missing floatas, and dates
 nrows = 15  # Number of rows
