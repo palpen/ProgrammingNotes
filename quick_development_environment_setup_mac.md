@@ -2,14 +2,11 @@
 
 ## Can't live without
 1. __Install SublimeText__
-	- !!! Sync package set up with one at home
-	- Add alias to bash profile to open Sublime Text in command line
-		- `alias sub='open -a "/Applications/Sublime Text.app" '`
+	- Add `alias subl='open -a "/Applications/Sublime Text.app" '` to bash profile
 2. __Install Iterm2 (version 3)__
 	- How to enable command line key navigation using the Alt (Option):
 		- In Iterm, hit Command + O, to open profiles. Click `Edit Profiles…` and under the `Keys` tab, select `Esc+` for both Left and Right Option key
 		- Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf
-	- !!! Sync bash aliases
 	- Set color to `Solarized Dark` (Profiles > Open Profiles > Default > Edit Profiles...> Colors tab > Color Presets... pull down)
 	- Customize prompt with nice colors (see below)
 3. __Install Anaconda__
@@ -17,7 +14,7 @@
 	- Then `source .bash_profile`
 	- To check, `which python` (`which` locates program file within user’s path) and should see `/anaconda3/bin/python`
 4. __Install Spectacle (Organize windows using shortcuts)__
-5. __Install XCode (includes important developer tools, like git)__
+5. __Install XCode (includes important developer tools such as git)__
 6. __Install Google Chrome__
 	* Install Vimium
 
@@ -39,6 +36,7 @@
 	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 10. Install [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
 11. Install [AceJump](https://github.com/ice9js/ace-jump-sublime): Move cursor to any character on screen
+12. Install [ayu](https://github.com/dempfi/ayu): Very nice and modern theme
 
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
