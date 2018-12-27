@@ -37,6 +37,7 @@
 10. Install [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
 11. Install [AceJump](https://github.com/ice9js/ace-jump-sublime): Move cursor to any character on screen
 12. Install [ayu](https://github.com/dempfi/ayu): Very nice and modern theme
+13. Install [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
 
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
