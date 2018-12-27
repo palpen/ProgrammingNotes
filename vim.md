@@ -5,7 +5,7 @@ I use [Sublime Text 3](https://www.sublimetext.com) with the [NeoVintageous](htt
 For basic vim motions and commands, type `vimtutor` in your command line if you are in a Unix environment.
 
 ## Motion
-Reference: (Text-object selection)[http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select]
+Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select)
 * Select a word: `viw`
 * Select contents inside braces: `vib`
 * Select contents inside quotes: `vi<QUOTE CHARACTER>`
