@@ -39,6 +39,18 @@
 12. Install [ayu](https://github.com/dempfi/ayu): Very nice and modern theme
 13. Install [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
 
+### Set-up to allow remote editing using Sublime Text 3
+Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instructions in the README. In particular,
+	* `mv /usr/local/bin/rmate /usr/local/bin/rsubl` to give command a more intuitive name
+	* Set up SSH config as
+		```
+		Host myremote
+			HostName HOSTNAME
+    		RemoteForward 52698 localhost:52698
+    		User USERNAME
+		```
+	so that connection is as simple as `ssh myremote`
+
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
 ```json
