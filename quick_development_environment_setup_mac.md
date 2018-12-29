@@ -42,7 +42,7 @@
 ### Set-up to allow remote editing using Sublime Text 3
 Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instructions in the README. In particular
 * `mv /usr/local/bin/rmate /usr/local/bin/rsubl` to give command a more intuitive name
-* Set up SSH config as
+* Add to SSH config in `~/.ssh/config`
 	```
 	Host myremote
 		HostName HOSTNAME
