@@ -2,7 +2,7 @@
 
 If you have nothing else to do on a weekend and you are a glutton for punishment, consider installing Ubuntu, GPU drivers, and all the associated libraries to set your PC up for deep learning. These are just some high level notes I made while suffering through this experience. They assume a clean installation of Ubuntu (16.04.3 LTS).
 
-There are three broad tasks you need to do to prepare your machine for deep learning. These are
+There are four broad tasks you need to do to prepare your machine for deep learning. These are
 
 1. Install a driver for your GPU
     - One way to do this is by executing `sudo apt-get install nvidia-375`
