@@ -11,7 +11,7 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 * Select contents inside quotes: `vi<QUOTE CHARACTER>`
     * `vi"`
 * Move cursor to previous or next empty line: `}` or `{`
-* Indent multiple lines quickly: `>>` (shift + . + .)
+* [Indent multiple lines quickly](https://stackoverflow.com/questions/235839/indent-multiple-lines-quickly-in-vi): `>>` (shift + . + .)
 
 ## Commands
 * Insert blank line below cursor (in command mode): `control + o`
