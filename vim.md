@@ -11,10 +11,12 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 * Select contents inside quotes: `vi<QUOTE CHARACTER>`
     * `vi"`
 * Move cursor to previous or next empty line: `}` or `{`
+* Indent multiple lines quickly: `>>` (shift + . + .)
 
 ## Commands
 * Insert blank line below cursor (in command mode): `control + o`
     * Not really a vim command but works in Sublime Text using NeoVintageous
+
 
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
