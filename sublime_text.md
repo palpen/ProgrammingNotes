@@ -2,7 +2,7 @@
 
 ## Shortcuts
 1. Move line up or down: `Command + Control + up arrow/down arrow`
-
+2. Place a cursor on every matched text from find: `Option + Enter`
 
 ## User Preferences
 Found in `Preferences.sublime-settings -- User`
