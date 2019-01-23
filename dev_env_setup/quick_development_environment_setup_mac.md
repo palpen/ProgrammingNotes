@@ -7,6 +7,7 @@
 	- Enable command line key navigation using Alt (Option) button:
 		- In Iterm, hit Command + O, to open profiles. Click `Edit Profiles…` and under the `Keys` tab, select `Esc+` for both Left and Right Option key (Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf)
 	- See `iterm2_profile` folder for custom settings
+		- See http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/
 	- Install and set up __Oh-My-Zsh__
 3. __Install Anaconda__
     	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
