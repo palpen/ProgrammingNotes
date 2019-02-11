@@ -14,6 +14,10 @@ Second approach is useful in cases where there is concern that a long-running pr
 This video explains the module really well:
 * EuroPython 2012, Andrew Dalke: https://www.youtube.com/watch?v=2Ng-UIedZMY
 
+Other useful references:
+* https://docs.python-guide.org/scenarios/speed/
+* https://docs.python.org/3/library/concurrent.futures.html
+
 ```python
 import time
 import concurrent.futures
