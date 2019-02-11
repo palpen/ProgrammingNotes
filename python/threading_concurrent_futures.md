@@ -11,6 +11,9 @@ The second approach--using functions `f_consume_now` and `run_consume_now`--exec
 
 Second approach is useful in cases where there is concern that a long-running process will be interrupted. In such case, one could capture the exception and export the data saved before the exception was raised.
 
+This video explains the module really well:
+* EuroPython 2012, Andrew Dalke: https://www.youtube.com/watch?v=2Ng-UIedZMY
+
 ```python
 import time
 import concurrent.futures
