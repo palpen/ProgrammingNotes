@@ -28,7 +28,7 @@ followed by the key for the desired action.
 
 ### Sessions
 ```
-s list sessions
+s list all active sessions (to switch to it)
 d detach/leave from session
 >> tmux attach: attach to tmux session 
 ```
