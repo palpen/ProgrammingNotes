@@ -54,7 +54,7 @@ x kill (close) pane
 There are various ways:
 * From within session you want killed: `Control + b, :, then type 'kill-session'`
 * If you know the id of the sesssion you want dead: `tmux kill-session -t targetSession`
-   * Use `tmux list-session` to list all active sessions and their ids
+   * Use `tmux list-sessions` to list all active sessions and their ids
 
 
 ## Detaching and reattaching to a session
