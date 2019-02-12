@@ -33,6 +33,12 @@ d detach/leave from session
 >> tmux attach: attach to tmux session 
 ```
 
+### Killing Sessions
+There are various ways:
+* From within session you want killed: `Control + b, :, then type 'kill-session'`
+* If you know the id of the sesssion you want dead: `tmux kill-session -t targetSession`
+   * Use `tmux list-session` to list all active sessions and their ids
+
 ### Windows (tabs)
 
 ### Panes
