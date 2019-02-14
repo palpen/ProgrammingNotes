@@ -52,6 +52,9 @@ x kill (close) pane
 Alt + →, ←, ↑, ↓ resize panes
 ```
 
+## Copy / Pasting in tmux
+* See https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
+
 ## Killing Sessions
 There are various ways:
 * From within session you want killed: `Control + b, :, then type 'kill-session'`
