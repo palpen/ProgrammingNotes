@@ -48,6 +48,8 @@ x kill (close) pane
 
 [ Scroll in pane 
     * Use arrow keys to move in pane or fn + arrow key to skip a page
+    
+Alt + →, ←, ↑, ↓ resize panes
 ```
 
 ## Killing Sessions
