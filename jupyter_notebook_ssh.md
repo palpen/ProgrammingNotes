@@ -67,5 +67,6 @@ Reference: https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via
     * https://cloud.google.com/solutions/connecting-securely
 2. Once you are connected, run jupyter notebook in port 5000
     * `jupyter notebook --port=5000 --no-browser`
+    * You can then send the running process in the background with `Control + z`, which sends it in a suspended state. To start it, enter `bg` in command line.
 3. In your local machine's browser, visit http://localhost:2222/ and enter the notebook’s token to access the notebook
 
