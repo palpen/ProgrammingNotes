@@ -62,10 +62,10 @@ jupyssh(){
 Reference: https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
 
 ## Jupyter Notebooks on GCP Compute Engine
-1. ssh into the remote GCP VM instance, and run  
-    * `jupyter notebook --port=5000 --no-browser`
-2. In a separate terminal in the local machine, use port forwarding over SSH
+1. SSH into example-instance and bind remote port 5000 to the local port 2222:
     * `gcloud compute ssh example-instance -- -L 2222:localhost:5000`
     * https://cloud.google.com/solutions/connecting-securely
-3. In the browser of your local machine, visit http://localhost:2222/ and enter the notebook’s token to access the notebook
+2. Once you are connected, run jupyter notebook in port 5000
+    * `jupyter notebook --port=5000 --no-browser`
+3. In your local machine's browser, visit http://localhost:2222/ and enter the notebook’s token to access the notebook
 
