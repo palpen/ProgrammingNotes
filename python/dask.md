@@ -1,5 +1,7 @@
 # Notes on Dask
 
+Some notes I'm taking while trying to learn Dask. Dask parallelizes Python code. It enables data analysis and machine learning for data that cannot fit in memory. It is great because it integrates well with the Python data ecosystem (numpy, pandas, scikit-learn).
+
 ## Basic Commands
 
 ### Loading list of csv files as a `dask.dataframe`
