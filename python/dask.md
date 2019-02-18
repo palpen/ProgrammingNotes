@@ -10,7 +10,23 @@ df = dd.read_csv('mydata_*.csv',
                  parse_dates={'Date': [0, 1, 2]})
 ```
 
+## Setting up cluster for Dask
+* This is from the scipy dask tutorial (referenced below). If a Kubernetes cluster is not available, the function sets up a local cluster
+
+```
+def make_cluster(**kwargs):
+    try:
+        from dask_kubernetes import KubeCluster
+        kwargs.setdefault('n_workers', 9)
+        cluster = KubeCluster(**kwargs)
+    except ImportError:
+        from distributed.deploy.local import LocalCluster
+        cluster = LocalCluster()
+    return cluster
+```
+
 ## Random Notes
+
 * Use `dask.delayed` for preprocessing that is specific to your dataset before loading it in as `dask.dataframe`
 * Assuming `df` is a `dask.dataframe`, `df.compute()` returns the full pandas dataframe in memory. Be careful if dataset is very large!
 * Speeding up computation by sharing intermediate results. Set up dask delays to compute mean and standard deviation:
