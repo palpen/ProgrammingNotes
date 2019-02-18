@@ -31,24 +31,24 @@ def make_cluster(**kwargs):
 * Assuming `df` is a `dask.dataframe`, `df.compute()` returns the full pandas dataframe in memory. Be careful if dataset is very large!
 * Speeding up computation by sharing intermediate results. Set up dask delays to compute mean and standard deviation:
 
-```
-mean = df.SomeVar.mean()
-std = df.SomeVar.std()
-```
+    ```
+    mean = df.SomeVar.mean()
+    std = df.SomeVar.std()
+    ```
 
-Now instead of running computation in sequence
+    Now instead of running computation in sequence
 
 
-```
-mean_res = mean.compute()
-std_res = std.compute()
-```
+    ```
+    mean_res = mean.compute()
+    std_res = std.compute()
+    ```
 
-do
+    do
 
-```
-mean_res, std_res = dask.compute(mean, std)
-```
+    ```
+    mean_res, std_res = dask.compute(mean, std)
+    ```
 
 * How to use pandas methods that are not available in dask? Use `map_partitions`! Given that a `dask.dataframe` is just a collection of chunks of pandas dataframes, `map_partitions` can apply the pandas method to the individual pandas dataframes.
 
