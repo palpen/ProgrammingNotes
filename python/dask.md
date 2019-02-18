@@ -55,7 +55,22 @@ def make_cluster(**kwargs):
 * How to use pandas methods that are not available in dask? Use `map_partitions`! Given that a `dask.dataframe` is just a collection of chunks of pandas dataframes, `map_partitions` can apply the pandas method to the individual pandas dataframes.
 
 ## Questions
-* What does `persist()` do?
+* What does `persist()` do? How is it different from `compute()`?
+    * `persist()` tells Dask to run the calculation but to persist the data in memory afterwards. It is useful for storing the intermediate result of an expensive operation. `compute()` does a quick calculation, but the calculation will have to be redone when running another downstream computation.
+    * For example, setting the index on a large dataset can be expensive. Apply persis to save the result
+
+    ```
+    df = df.set_index("Date").persist()
+    ```
+
+    If we didn't apply persist
+
+    ```
+    df = df.set_index("Date")
+    ```
+
+    then every time we run `df.sum().compute()` dask will have to set the index since the reference of `df` is to `df.set_index("date")`
+
 * What is a `dask.array`? How is it different from a `dask.dataframe`?
     * `dask.array` ...
     * `dask.dataframes` are parallelized pandas dataframes. The datasets are stored as individual pandas dataframes under the hood. The command `df.SomeVariable.max().visualize()` demonstrates this with a graph.
