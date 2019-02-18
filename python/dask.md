@@ -13,13 +13,33 @@ df = dd.read_csv('mydata_*.csv',
 ## Random Notes
 * Use `dask.delayed` for preprocessing that is specific to your dataset before loading it in as `dask.dataframe`
 * Assuming `df` is a `dask.dataframe`, `df.compute()` returns the full pandas dataframe in memory. Be careful if dataset is very large!
+* Speeding up computation by sharing intermediate results. Set up dask delays to compute mean and standard deviation:
+
+```
+mean = df.SomeVar.mean()
+std = df.SomeVar.std()
+```
+
+Now instead of running computation in sequence
+
+
+```
+mean_res = mean.compute()
+std_res = std.compute()
+```
+
+do
+
+```
+mean_res, std_res = dask.compute(mean, std)
+```
 
 ## Questions
 * What does `persist()` do?
 * What is a `dask.array`? How is it different from a `dask.dataframe`?
     * `dask.array` ...
     * `dask.dataframes` are parallelized pandas dataframes. The datasets are stored as individual pandas dataframes under the hood. The command `df.SomeVariable.max().visualize()` demonstrates this with a graph.
-* What is `dask.delayed`? What does it do?
+* What is `dask.delayed`? What does it
 
 
 ## References
