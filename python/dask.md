@@ -34,6 +34,8 @@ do
 mean_res, std_res = dask.compute(mean, std)
 ```
 
+* How to use pandas methods that are not available in dask? Use `map_partitions`! Given that a `dask.dataframe` is just a collection of chunks of pandas dataframes, `map_partitions` can apply the pandas method to the individual pandas dataframes.
+
 ## Questions
 * What does `persist()` do?
 * What is a `dask.array`? How is it different from a `dask.dataframe`?
