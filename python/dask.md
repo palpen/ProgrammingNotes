@@ -12,6 +12,9 @@ df = dd.read_csv('mydata_*.csv',
                  parse_dates={'Date': [0, 1, 2]})
 ```
 
+### Exploring Data
+* To see head: `df.head()`. To see head of say the third partition, `df.head(npartitions=3)`
+
 ## Setting up cluster for Dask
 * This is from the scipy dask tutorial (referenced below). If a Kubernetes cluster is not available, the function sets up a local cluster
 
