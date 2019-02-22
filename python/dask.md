@@ -86,15 +86,13 @@ I found [this](https://www.youtube.com/watch?v=mqdglv9GnM8) Scipy tutorial on Da
 
 Here's a breakdown of the different notebooks and the corresponding timelines in the video:
 
-0. [00-intro (4:31)](https://youtu.be/mqdglv9GnM8?t=271)
-1. 01-dask.delayed
-2. 02-dask-arrays
-3. 03-dask-dataframes
-4. 04-schedulers
-5. 05-distributed-dataframes-and-efficiency
-6. 06-distributed-advanced
-7. 07-machine-learning
-
+1. [01-dask.delayed (4:31)](https://youtu.be/mqdglv9GnM8?t=271)
+2. [02-dask-arrays (39:05)](https://youtu.be/mqdglv9GnM8?t=2344)
+3. [03-dask-dataframes (1:18:15)](https://youtu.be/mqdglv9GnM8?t=4695)
+4. [04-schedulers (1:48:37)](https://youtu.be/mqdglv9GnM8?t=6517)
+5. [05-distributed-dataframes-and-efficiency (2:12:24)](https://youtu.be/mqdglv9GnM8?t=7936)
+6. [06-distributed-advanced (2:38:26)](https://youtu.be/mqdglv9GnM8?t=9506)
+7. [07-machine-learning (2:59:51)](https://youtu.be/mqdglv9GnM8?t=10791)
 
 
 ## References
