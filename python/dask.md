@@ -79,6 +79,23 @@ def make_cluster(**kwargs):
     * `dask.dataframes` are parallelized pandas dataframes. The datasets are stored as individual pandas dataframes under the hood. The command `df.SomeVariable.max().visualize()` demonstrates this with a graph.
 * What is `dask.delayed`? What does it
 
+## Dask SciPy Tutorial, 2018
+I found [this](https://www.youtube.com/watch?v=mqdglv9GnM8) Scipy tutorial on Dask in 2018 incredibly useful.  Here's the repo containing the notebooks for the tutorial:
+
+* [Github Repo](https://github.com/martindurant/dask-tutorial-scipy-2018)
+
+Here's a breakdown of the different notebooks and the corresponding timelines in the video:
+
+0. [00-intro (4:31)](https://youtu.be/mqdglv9GnM8?t=271)
+1. 01-dask.delayed
+2. 02-dask-arrays
+3. 03-dask-dataframes
+4. 04-schedulers
+5. 05-distributed-dataframes-and-efficiency
+6. 06-distributed-advanced
+7. 07-machine-learning
+
+
 
 ## References
 1. [Scalable ML using Dask](https://www.youtube.com/watch?v=tQBovBvSDvA)
