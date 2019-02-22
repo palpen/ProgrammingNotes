@@ -84,7 +84,7 @@ I found [this](https://www.youtube.com/watch?v=mqdglv9GnM8) Scipy tutorial on Da
 
 * [Github Repo](https://github.com/martindurant/dask-tutorial-scipy-2018)
 
-Here's a breakdown of the different notebooks and the corresponding timelines in the video:
+Here's a breakdown timelines in the video wher each notebook was covered:
 
 1. [01-dask.delayed (4:31)](https://youtu.be/mqdglv9GnM8?t=271)
 2. [02-dask-arrays (39:05)](https://youtu.be/mqdglv9GnM8?t=2344)
