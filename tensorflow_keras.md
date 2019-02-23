@@ -29,9 +29,17 @@ os.environ['LD_LIBRARY_PATH'] = '/usr/local/cuda-8.0/lib64:usr/local/cuda-8.0/li
 c.Spawner.env.update('LD_LIBRARY_PATH')
 ```
 
+## Check to see that GPU is available
+
+```python
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
+```
+
 ## Switch between GPU and CPU for training
 Set GPU to 0 below for no GPUs (e.g. use CPU only). Set to 1 and TensorFlow will automatically use the GPU.
-```
+
+```python
 config = tf.ConfigProto(
     device_count = {'GPU': 0}
 )
@@ -42,7 +50,7 @@ Alternatively, you can execute `fit` in a context manager:
 
 With CPU
 
-```
+```python
 import tensorflow as tf
 with tf.device('/cpu:0'):
     network.fit(train_images, train_labels, epochs=15, batch_size=128)
@@ -50,16 +58,8 @@ with tf.device('/cpu:0'):
 
 With GPU
 
-```
+```python
 import tensorflow as tf
 with tf.device('/gpu:0'):
     network.fit(train_images, train_labels, epochs=15, batch_size=128)
 ```
-
-## Check to see that GPU is available
-```
-from tensorflow.python.client import device_lib
-print(device_lib.list_local_devices())
-```
-
-
