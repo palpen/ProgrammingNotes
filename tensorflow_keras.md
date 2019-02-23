@@ -38,6 +38,24 @@ config = tf.ConfigProto(
 sess = tf.Session(config=config)
 ```
 
+Alternatively, you can execute `fit` in a context manager:
+
+With CPU
+
+```
+import tensorflow as tf
+with tf.device('/cpu:0'):
+    network.fit(train_images, train_labels, epochs=15, batch_size=128)
+```
+
+With GPU
+
+```
+import tensorflow as tf
+with tf.device('/gpu:0'):
+    network.fit(train_images, train_labels, epochs=15, batch_size=128)
+```
+
 ## Check to see that GPU is available
 ```
 from tensorflow.python.client import device_lib
