@@ -3,6 +3,16 @@
 ## What is Kubernetes?
 ["...container-focused cluster management thing"](http://kamalmarhubi.com/blog/2015/08/27/what-even-is-a-kubelet/)
 
+## Why I care about Kubenetes
+* For distributed data analytics using [Dask](http://docs.dask.org/en/latest/) in the cloud
+* The basic workflow I'd like to master are
+	1. Create a cluster in the cloud
+	2. Using Dask, offload data preprocessing on cluster
+	3. Scale up/down cluster according to needs
+* The services I'll need to do this are
+	1. Google Kubernetes Engine for creating the Kubernetes cluster
+	2. Helm for package management in Kubernetes
+
 ## FAQs
 * What lives inside a pod? Containers (e.g. Docker)
 * How many containers can live in a pod? Any number, but usually just two
