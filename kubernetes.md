@@ -28,3 +28,4 @@
 	* See section on "__Kubernetes from the ground up__"
 * [Kubernetes BootCamp](https://kubernetesbootcamp.github.io/kubernetes-bootcamp/)
 * [The Illustrated Childrens Guide to Kubernetes](https://cdn.chrisshort.net/The-Illustrated-Childrens-Guide-to-Kubernetes.pdf)
+* [Managing Containers at Scale with CoreOS and Kubernetes by Kelsey Hightower](https://www.youtube.com/watch?v=pozC9rBvAIs)
