@@ -48,7 +48,7 @@ x kill (close) pane
 
 [ Scroll in pane 
     * Use arrow keys to move in pane or fn + arrow key to skip a page
-    * To quite scroll mode, press q
+    * To quit scroll mode, press q
     
 Alt + →, ←, ↑, ↓ resize panes
 ```
