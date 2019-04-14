@@ -60,14 +60,17 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Desktop/git_proj/ProgrammingNotes/dev_env_setup/iterm2_profile</string>
+<<<<<<< Updated upstream
 	<key>NSNavLastUserSetHideExtensionButtonState</key>
 	<true/>
+=======
+>>>>>>> Stashed changes
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{1210, 591}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
+	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -105,10 +108,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>928 110 445 103 0 0 1440 877 </string>
+	<string>929 110 445 103 0 0 1440 877 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>-1574 1726 735 382 -1928 900 2560 1417 </string>
+	<string>0 0 735 877 0 0 1440 877 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>851 561 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
+<<<<<<< Updated upstream
 	<string>-958 1668 620 392 -1928 900 2560 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1635 1556 606 469 -1882 900 2560 1417 </string>
@@ -118,9 +124,21 @@
 	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-1026 900 1702 1417 -1882 900 2560 1417 </string>
+=======
+	<string>410 363 620 392 0 0 1440 877 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>72 294 609 401 0 0 1440 877 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>354 324 918 423 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 0</key>
+	<string>724 0 712 877 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>4 0 712 877 0 0 1440 877 </string>
+>>>>>>> Stashed changes
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 0 1440 877 0 0 1440 877 </string>
+	<string>4 0 712 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
+<<<<<<< Updated upstream
 	<string>0 0 1440 877 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>-1928 1266 1450 1051 -1928 900 2560 1417 </string>
@@ -130,6 +148,9 @@
 	<string>-818 900 1450 1051 -1928 900 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
 	<string>843 0 833 1027 0 0 1680 1027 </string>
+=======
+	<string>720 0 720 877 0 0 1440 877 </string>
+>>>>>>> Stashed changes
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -710,7 +731,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 30</string>
+			<string>Monaco 22</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1501,20 +1522,92 @@
 	</array>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>243A4F47-B7CE-406E-8C8B-4A07BA5DDFCC</string>
-	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
-	<true/>
+	<string>8897EC18-AF89-47FA-9810-AEE671E5C27A</string>
+	<key>NoSyncLastTipTime</key>
+	<real>571426643.90074098</real>
 	<key>NoSyncPermissionToShowTip</key>
-	<false/>
-	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>547425326.33075404</real>
+	<real>561423721.16372502</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
+		<string>0066</string>
+		<string>0067</string>
+		<string>0068</string>
+		<string>0069</string>
+		<string>0070</string>
+		<string>0071</string>
+	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
@@ -1553,7 +1646,11 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
+<<<<<<< Updated upstream
 	<string>/Users/s6215054/Desktop/git_proj/ProgrammingNotes/dev_env_setup/iterm2_profile</string>
+=======
+	<string>/Users/palermospenano/Desktop/git_proj/ProgrammingNotes/dev_env_setup/iterm2_profile</string>
+>>>>>>> Stashed changes
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1561,11 +1658,15 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=67</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=80</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
+<<<<<<< Updated upstream
 	<date>2019-03-13T14:13:08Z</date>
+=======
+	<date>2019-03-28T01:39:09Z</date>
+>>>>>>> Stashed changes
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
