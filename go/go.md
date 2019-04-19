@@ -5,7 +5,7 @@
 
 ## Basic Go syntax
 
-Run programs in main
+* Run programs in main
 
 ```go
 package main
@@ -19,7 +19,7 @@ func main() {
 }
 ```
 
-Functions
+__Functions__
 
 ```go
 
@@ -36,7 +36,7 @@ func main() {
 }
 ```
 
-Loops
+__Loops__
 
 Three components:
 1. init statement `i:=0` executed before first iteration
@@ -49,7 +49,7 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-Initialize slice:
+__Slice__
 
 ```go
 // initialize with some values
@@ -57,4 +57,13 @@ myslice := []int{}
 
 // initialize with nil value
 var myslice []int
+```
+
+__Iterating through a slice__
+
+```go
+\\ i gives the index, v the value
+for i, v := range myslice {
+    fmt.Println(i, v)
+}
 ```
