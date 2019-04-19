@@ -49,3 +49,12 @@ for i := 0; i < 10; i++ {
 }
 ```
 
+Initialize slice:
+
+```go
+// initialize with some values
+myslice := []int{}
+
+// initialize with nil value
+var myslice []int
+```
