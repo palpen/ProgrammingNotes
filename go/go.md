@@ -11,10 +11,10 @@ Run programs in main
 package main
 
 import (
-  "fmt"
- )
+    "fmt"
+)
  
- func main() {
-  fmt.Println("Hello, World!")
- }
+func main() {
+    fmt.Println("Hello, World!")
+}
 ```
