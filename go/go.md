@@ -43,7 +43,7 @@ Three components:
 2. condition expression `i < 10` evaluated before every iteration
 3. post statement `i++` executed at the end of every iteration
 
-```
+```go
 for i := 0; i < 10; i++ {
     fmt.Println("Hello, World!")
 }
