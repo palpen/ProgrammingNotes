@@ -59,6 +59,22 @@ myslice := []int{}
 var myslice []int
 ```
 
+Appending slices together
+
+```golang
+s1 := []int{1, 3, 5}
+s2 := []int{2, 4, 6}
+s3 := []int{}
+s3 = append(s1, s2...) \\ s3 == [1,3,5,2,4,6]
+```
+
+or just the first two elements of `s2`
+
+```golang
+s3 := []int{}
+s3 = append(s1, s2[0:2]...) \\ s3 == [1,3,5,2,1]
+```
+
 __Iterating through a slice__
 
 ```go
