@@ -117,4 +117,9 @@ If you want to sort by values and return the sorted values themselves, do
 >>> ['a', 'b', 'c']
 ```
 
+4. How to format numeric values using the `format()` function
+```
+In [21]: format(1121221.23123, ',.2f')
+Out[21]: '1,121,221.23'
+```
 
