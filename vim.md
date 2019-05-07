@@ -16,7 +16,7 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 ## Commands
 * Insert blank line below cursor (in command mode): `control + o`
     * Not really a vim command but works in Sublime Text using NeoVintageous
-
+* How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
 
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
