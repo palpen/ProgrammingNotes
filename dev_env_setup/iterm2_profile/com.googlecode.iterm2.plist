@@ -79,6 +79,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -108,21 +113,30 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
+<<<<<<< Updated upstream
 	<string>929 110 445 103 0 0 1440 877 </string>
+=======
+	<string>928 33 445 77 0 0 1440 877 </string>
+>>>>>>> Stashed changes
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>0 0 735 877 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>851 561 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	<string>-958 1668 620 392 -1928 900 2560 1417 </string>
+=======
+	<string>530 476 620 392 0 0 1680 1027 </string>
+>>>>>>> Stashed changes
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1635 1556 606 469 -1882 900 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>481 266 1016 512 0 0 1680 1027 </string>
+	<string>480 333 1016 512 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1027 0 0 1680 1027 </string>
+	<string>0 573 1680 454 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
+<<<<<<< Updated upstream
 	<string>-1026 900 1702 1417 -1882 900 2560 1417 </string>
 =======
 	<string>410 363 620 392 0 0 1440 877 </string>
@@ -137,6 +151,11 @@
 >>>>>>> Stashed changes
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>4 0 712 877 0 0 1440 877 </string>
+=======
+	<string>408 176 1130 851 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>-1027 900 1704 1417 -1882 900 2560 1417 </string>
+>>>>>>> Stashed changes
 	<key>NSWindow Frame iTerm Window 3</key>
 <<<<<<< Updated upstream
 	<string>0 0 1440 877 0 0 1680 1027 </string>
@@ -413,8 +432,34 @@
 			</dict>
 			<key>Guid</key>
 			<string>480F44D8-2016-4082-BAD2-B4B356BC0740</string>
+			<key>Has Hotkey</key>
+			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>HotKey Activated By Modifier</key>
+			<false/>
+			<key>HotKey Alternate Shortcuts</key>
+			<array/>
+			<key>HotKey Characters</key>
+			<string></string>
+			<key>HotKey Characters Ignoring Modifiers</key>
+			<string></string>
+			<key>HotKey Key Code</key>
+			<integer>0</integer>
+			<key>HotKey Modifier Activation</key>
+			<integer>0</integer>
+			<key>HotKey Modifier Flags</key>
+			<integer>0</integer>
+			<key>HotKey Window Animates</key>
+			<true/>
+			<key>HotKey Window AutoHides</key>
+			<true/>
+			<key>HotKey Window Dock Click Action</key>
+			<integer>0</integer>
+			<key>HotKey Window Floats</key>
+			<true/>
+			<key>HotKey Window Reopens On Activation</key>
+			<false/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -731,7 +776,11 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
+<<<<<<< Updated upstream
 			<string>Monaco 22</string>
+=======
+			<string>Monaco 24</string>
+>>>>>>> Stashed changes
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1663,9 +1712,13 @@
 	<true/>
 	<key>SULastCheckTime</key>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	<date>2019-03-13T14:13:08Z</date>
 =======
 	<date>2019-03-28T01:39:09Z</date>
+>>>>>>> Stashed changes
+=======
+	<date>2019-04-23T20:58:50Z</date>
 >>>>>>> Stashed changes
 	<key>SUSendProfileInfo</key>
 	<false/>
@@ -5546,7 +5599,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.7</string>
+	<string>3.2.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
