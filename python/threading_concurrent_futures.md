@@ -9,7 +9,7 @@ The first approach--using functions `f` and `run`--executes the task and consume
 
 The second approach--using functions `f_consume_now` and `run_consume_now`--executes the task and consumes the results as they are completed (by appending them to a list)
 
-Second approach is useful in cases where there is concern that a long-running process will be interrupted. In such case, one could capture the exception and export the data saved before the exception was raised.
+The second approach is useful in cases where a long-running process may be interrupted. In such case, one could capture the exception and export the data saved before the interruption.
 
 This video explains the module really well:
 * EuroPython 2012, Andrew Dalke: https://www.youtube.com/watch?v=2Ng-UIedZMY
@@ -72,11 +72,15 @@ if __name__ == '__main__':
     # Consume as each input is processed
     file_list = [f"file {x}" for x in range(10000)]
     args = [(call, "gcp client service") for call in file_list]
-    final_results = run_consume_now(f_consume_now,
-                                    args,
-                                    number_workers=1)
+    final_results = run_consume_now(
+        f_consume_now,
+        args,
+        number_workers=1000
+    )
 
-    print(f"Len final results: {len(final_results)}",
-          f"Preview final results: {final_results[0:5]}",
-          sep='\n')
+    print(
+        f"Len final results: {len(final_results)}",
+        f"Preview final results: {final_results[0:5]}",
+        sep='\n'
+    )
 ```
