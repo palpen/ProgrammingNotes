@@ -9,3 +9,10 @@ for c in cols:
     except Exception as e:
         print("Cannot cast to int:", e)
 ```
+
+2. Create arbitrary dataframe with random values
+```
+import pandas as pd
+import numpy as np
+df = pd.DataFrame(np.random.rand(10, 3), columns=['a', 'b', 'c'])
+```
