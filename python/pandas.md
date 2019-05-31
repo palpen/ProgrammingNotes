@@ -17,3 +17,12 @@ import pandas as pd
 import numpy as np
 df = pd.DataFrame(np.random.rand(10, 3), columns=['a', 'b', 'c'])
 ```
+
+3. Quickly plot and save figure
+
+```python
+import pandas as pd; df = pd.read_csv('mydata.csv')
+ax = df.plot('x_col', figsize=(14, 9))  # x_col is column in x-axis; figsize=(width, height)
+fig = ax.get_figure()
+fig.savefig('myplot.png')
+```
