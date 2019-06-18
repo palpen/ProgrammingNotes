@@ -28,6 +28,17 @@ ax.plot(df['x_var'], df['y_var'])
 plt.show()
 ```
 
+## Saving figure
+
+After generating the image, invoke
+
+```python
+plt.savefig('myfig.pdf', bbox_inches='tight', dpi=300)
+```
+
+`bbox_inches='tight'` removes the figure's margins
+
+
 ## How to show an image
 ```python
 import matplotlib.pyplot as plt
