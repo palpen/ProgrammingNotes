@@ -23,3 +23,38 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 * To configure the editor created an `init.vim` file in `~/.config/nvim`. Use `init.vim` the same way you would use a `.vimrc` file.
 * Color themes are stored in `~/.config/nvim/colors`
 	* Here's a useful color scheme [NeoSolarized](https://github.com/icymind/NeoSolarized)
+
+## Basic .vimrc
+```
+set number
+set linebreak
+set showbreak=+++
+set textwidth=100
+set showmatch
+set visualbell
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+set autoindent
+set shiftwidth=4
+set smartindent
+set smarttab
+set softtabstop=4
+set ruler
+set undolevels=1000
+set backspace=indent,eol,start
+syntax on
+```
+
+## Basic Vim Setup on Remote Server
+
+___tmux + vim + gruvbox color scheme___
+* Install Pathogen (vim plugin manager): https://github.com/tpope/vim-pathogen
+    * Add `execute pathogen#infect()` to top .vimrc config file
+* Place `export TERM=xterm-256color` in .bashrc or .zshrc config file
+* Install gruvbox colorscheme using Pathogen: https://github.com/morhetz/gruvbox/wiki/Installation
+* In .vimrc config file, add the following
+    * `syntax on`
+    * `colorscheme gruvbox`
+    * `set background=dark`
