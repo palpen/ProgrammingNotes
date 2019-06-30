@@ -12,6 +12,8 @@ emacs --insecure
 ### Key definitions
 C -> Control
 M -> Meta (Option)
+SPC -> Space (unique to Spacemacs)
+	Easier way to access useful commands and other functionalities (e.g. shell command)
 
 ### Basic commands
 C-x C-c -> Quit emacs
