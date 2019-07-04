@@ -1,6 +1,10 @@
 
 # Notes on Spacemacs
 
+## Getting Started
+
+For installation instructions, [click here](https://github.com/syl20bnr/spacemacs#install). Note that one must first install Emacs before Spacemacs
+
 Starting spacemacs, run
 
 ```
@@ -9,7 +13,7 @@ emacs --insecure
 
 ## Commands
 
-### Key definitions
+### Key Definitions
 
 ```
 C -> Control
