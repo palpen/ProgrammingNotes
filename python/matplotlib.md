@@ -46,3 +46,10 @@ img = plt.imread('my_image.jpg')
 plt.imshow(img);
 plt.show();
 ```
+
+## Setting interactive backend
+```python
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+```
