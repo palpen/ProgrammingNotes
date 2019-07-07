@@ -18,12 +18,9 @@ emacs --insecure
 ```
 C -> Control
 M -> Meta (Option)
-<<<<<<< HEAD
 SPC -> Space (unique to Spacemacs)
 	Easier way to access useful commands and other functionalities (e.g. shell command)
-=======
 ```
->>>>>>> da9f8123c2ec5f68c037fac0a4a6be9700d4e557
 
 ### Basic commands
 
@@ -33,11 +30,8 @@ C-g -> Cancel current action
 C-x C-f -> Open a file (whether or not it exist)
 C-x C-s -> Save file
 C-x C-w -> Write a file (Save as...)
-<<<<<<< Updated upstream
-```
-=======
 M-x cd -> Change working directory of current session
->>>>>>> Stashed changes
+```
 
 ### Buffers and Windows
 
@@ -76,4 +70,3 @@ Look for
 
 ## Resources
 - [A Guided Tour of (original) Emacs](https://www.gnu.org/software/emacs/tour/index.html)
-- 
