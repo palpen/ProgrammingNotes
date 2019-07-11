@@ -12,6 +12,15 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
     * `vi"`
 * Move cursor to previous or next empty line: `}` or `{`
 * [Indent multiple lines quickly](https://stackoverflow.com/questions/235839/indent-multiple-lines-quickly-in-vi): `>>` (shift + . + .)
+* Insert # in front of _selected_ lines: 
+	* `Control + v` to enter columnwise visual mode
+	* Select desired lines
+	* `Shift + i` to enter insert mode on those lines and insert #
+	* Escape to apply changes to the selected lines
+
+## Search and replace
+* Place a # in front of every line: `:%s/^/#/`
+* Place a , at the end of every line: `:%s/$/,/`
 
 ## Commands
 * Insert blank line below cursor (in command mode): `control + o`
