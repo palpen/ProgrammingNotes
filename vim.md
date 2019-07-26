@@ -18,6 +18,12 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 	* `Shift + i` to enter insert mode on those lines and insert #
 	* Escape to apply changes to the selected lines
 
+## Delete, yank and put
+D -> delete from cursor to end of line (characterwise)
+
+### Inserting a line in the middle of another line
+`dd` will do a linewise deletion, which following a put command, `P` or `p`, will either insert the deleted line before or after the line in which the cursor is located. To insert the deleted line at the cursor position, do a characterwise deletion, `0D` (0 will move cursor to the begining of the line and `D` will do a characerwise deletion from the cursor to the end of the line). See https://vimhelp.org/motion.txt.html#linewise
+
 ## Search and replace
 * Place a # in front of every line: `:%s/^/#/`
 * Place a , at the end of every line: `:%s/$/,/`
