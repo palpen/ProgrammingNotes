@@ -47,7 +47,9 @@ C-x k -> Kill current buffer
 
 ```
 C-c C-s -> Open SML prompt
-C-c C-d -> end SML session (comint-send-eof)
+C-c C-d -> End SML session (comint-send-eof)
+C-c C-n -> Go to next prompt (useful when an error is raised and want to close end session)
+C-c C-o -> Delete output
 ```
 
 ### Spacemacs specific commands
@@ -56,7 +58,8 @@ SPC s c -> Clear search highlight
 ## Configuring Spacemacs
 
 __How to change default font__
-Look for
+
+In `~/.spacemacs` look for
 
 ```
  dotspacemacs-default-font '("Source Code Pro"
@@ -66,7 +69,7 @@ Look for
                                :powerline-scale 1.1)
 ```
 
-`~/.spacemacs` edit the `size` parameter
+and edit the `size` parameter
 
 ## Resources
 - [A Guided Tour of (original) Emacs](https://www.gnu.org/software/emacs/tour/index.html)
