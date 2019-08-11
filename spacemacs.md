@@ -50,10 +50,14 @@ C-c C-s -> Open SML prompt
 C-c C-d -> End SML session (comint-send-eof)
 C-c C-n -> Go to next prompt (useful when an error is raised and want to close end session)
 C-c C-o -> Delete output
+M-; -> Apply line comment to selected line
 ```
 
 ### Spacemacs specific commands
 SPC s c -> Clear search highlight
+
+### Misc. Commands
+M-x, then search `delete-trailing-whitespace` -> Removes all trailing whitespace
 
 ## Configuring Spacemacs
 
