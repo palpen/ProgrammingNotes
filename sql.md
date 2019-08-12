@@ -1,10 +1,27 @@
 # Notes on SQL commands
 
-# Basic SQL Queries
+# Basic SQL Queries (for SQL Server)
 
-* Count number of rows that satisfy condition
-    - `SELECT COUNT(*) FROM table_name WHERE field_name > 0`
+```sql
+--- Get all unique values of column
+SELECT DISTINCT column
+FROM table
 
+--- Get unique values of column and the count for each
+SELECT column, COUNT(column)
+FROM table
+GROUP BY column
+
+-- Get count of distinct values in column
+SELECT COUNT(DISTINCT column)
+FROM table
+
+-- Count number of rows that satisfy conditions (e.g. column>0, column=10)
+SELECT COUNT(*)
+FROM table
+WHERE condition1
+AND condition2
+```
 
 ## SQLite
 
