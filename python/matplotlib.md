@@ -53,3 +53,12 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 ```
+
+# Various useful features
+
+## 
+```
+loc = ticker.MultipleLocator(base=4.0) # this locator puts ticks at regular intervals
+ax.xaxis.set_major_locator(loc)
+```
+[source](https://stackoverflow.com/questions/12608788/changing-the-tick-frequency-on-x-or-y-axis-in-matplotlib)
