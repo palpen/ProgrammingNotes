@@ -56,7 +56,7 @@ import matplotlib.pyplot as plt
 
 # Various useful features
 
-## Fix regular interval along x axis
+#### Fix regular interval along x axis
 May not get expected result for datetime objects
 ```
 loc = ticker.MultipleLocator(base=4.0) # this locator puts ticks at regular intervals
