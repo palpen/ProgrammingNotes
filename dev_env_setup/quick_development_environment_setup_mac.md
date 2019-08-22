@@ -3,23 +3,24 @@
 ## Can't live without
 1. __Install SublimeText__
 	- Add `alias subl='open -a "/Applications/Sublime Text.app" '` to bash profile
-2. __Install Iterm2 (version 3)__
+2. [Iterm2](https://www.iterm2.com/): Better terminal emulator than Terminal
 	- Enable command line key navigation using Alt (Option) button:
 		- In Iterm, hit Command + O, to open profiles. Click `Edit Profiles…` and under the `Keys` tab, select `Esc+` for both Left and Right Option key (Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf)
 	- See `iterm2_profile` folder for custom settings
 		- See http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/
 	- Install and set up __Oh-My-Zsh__
-3. __Install Anaconda__
-    	- After installation, make sure that `export PATH="/anaconda3/bin:$PATH"` is in .bash_profile
-	- Then `source .bash_profile`
-	- To check, `which python` (`which` locates program file within user’s path) and should see `/anaconda3/bin/python`
-4. __Install Spectacle (Organize windows using shortcuts)__
-5. __Install XCode__
-6. __Install Google Chrome with Vimium Extension__
+3. [Miniconda](https://docs.conda.io/en/latest/miniconda.html): Lightweight version of [Anaconda](https://www.anaconda.com/distribution/)
+    - Move conda initializer from `.bash_profile` to `.zshrc`
+4. [Spectacle](https://www.spectacleapp.com/): Window manager
+5. [XCode](https://developer.apple.com/xcode/): MacOS developer tools 
+	- `xcode-select --install`
+6. [Homebrew](https://brew.sh/): Package manager for MacOS
+7. Google Chrome with Vimium Extension
 
 ## If Necessary
 1. __Install Docker__
 2. __Install Dropbox__
+3. __1Password__
 
 ## Sublime Text 3 Configuration
 1. Install Package Control
