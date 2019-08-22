@@ -1,8 +1,8 @@
 # Quick Development Environment Setup on Mac
 
 ## Can't live without
-1. __Install SublimeText__
-	- Add `alias subl='open -a "/Applications/Sublime Text.app" '` to bash profile
+1. [SublimeText](https://www.sublimetext.com/): Text editor
+	- Add `alias subl='open -a "/Applications/Sublime Text.app" '` to start-up script
 2. [Iterm2](https://www.iterm2.com/): Better terminal emulator than Terminal
 	- Enable command line key navigation using Alt (Option) button:
 		- In Iterm, hit Command + O, to open profiles. Click `Edit Profiles…` and under the `Keys` tab, select `Esc+` for both Left and Right Option key (Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf)
@@ -18,9 +18,9 @@
 7. Google Chrome with Vimium Extension
 
 ## If Necessary
-1. __Install Docker__
-2. __Install Dropbox__
-3. __1Password__
+1. Docker
+2. Dropbox
+3. 1Password
 
 ## Sublime Text 3 Configuration
 1. Install Package Control
