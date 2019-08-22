@@ -106,7 +106,7 @@ This way, you let conda deal with the dependencies required for each of these pa
 
 Reference: https://conda.io/docs/user-guide/tasks/manage-environments.html
 
-### How to pip install packages in an environment.yml file
+### Pip install in conda
 In `environment.yml` file, do the following:
 ```
 name: toxic_comment_kaggle
@@ -115,3 +115,18 @@ dependencies:
   - pip:
     - flask_restplus
 ```
+
+### Setting channels in environment file
+
+Alternatively, one could set the channel from which to install the package, thereby avoiding having to use pip and issues associated with using conda and pip together. To do this, set up the environment file as follows:
+
+```
+name: toxic_comment_kaggle
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - flask_restplus
+```
+
+`conda-forge` contains packages that may not be in the Anaconda repository of packages. Specifying this channel will allow you to install such packages using `conda`.
