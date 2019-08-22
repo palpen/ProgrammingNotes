@@ -55,12 +55,12 @@ Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instr
 }
 ```
 
-## Useful, but not necessary
+## Useful, but not too important
 1. [Honer](https://github.com/puffnfresh/Honer.app): Draws a line around currently active window
 
 ## A few useful things to add to .zshrc
 ```bash
-# customize prompt with nice colors
+# customize prompt with nice colours
 # discussion of colors: https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
 # Color tag comes in the form of \[\033[COLORm\], where COLOR is a number
 # for the color of the foreground text (e.g. 30==Black, 36==Cyan)
