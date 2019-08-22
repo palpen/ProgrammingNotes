@@ -1,6 +1,6 @@
-# Quick Development Environment Setup on Mac
+# Development Environment Setup on Mac
 
-## Can't live without
+## Must Have
 1. [SublimeText](https://www.sublimetext.com/): Text editor
 	- Add `alias subl='open -a "/Applications/Sublime Text.app" '` to start-up script
 2. [Iterm2](https://www.iterm2.com/): Better terminal emulator than Terminal
@@ -12,7 +12,7 @@
 3. [Miniconda](https://docs.conda.io/en/latest/miniconda.html): Lightweight version of [Anaconda](https://www.anaconda.com/distribution/)
     - Move conda initializer from `.bash_profile` to `.zshrc`
 4. [Spectacle](https://www.spectacleapp.com/): Window manager
-5. [XCode](https://developer.apple.com/xcode/): MacOS developer tools 
+5. [XCode](https://developer.apple.com/xcode/): MacOS developer tools
 	- `xcode-select --install`
 6. [Homebrew](https://brew.sh/): Package manager for MacOS
 7. Google Chrome with Vimium Extension
@@ -22,22 +22,17 @@
 2. Dropbox
 3. 1Password
 
-## Sublime Text 3 Configuration
-1. Install Package Control
-2. Install GitGutter
-3. Install SideBarEnhancements
-4. Install SublimeLinter (does not include linter)
-	- Install SublimeLinter-pycodestyle (also in package control)
-5. Install MarkdownPreview
-6. Install PEP8 Autoformat
-7. Install TrailingSpaces (highlight and remove trailing spaces)
-8. Install Git ([this one](https://github.com/kemayo/sublime-text-git))
-9. Create a symbolic link from Sublime Text CLI to /usr/local/bin/sub
-	* `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
-10. Install [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
-11. Install [AceJump](https://github.com/ice9js/ace-jump-sublime): Move cursor to any character on screen
-12. Install [ayu](https://github.com/dempfi/ayu): Very nice and modern theme
-13. Install [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
+## Sublime Text 3 Packages
+1. [Package Control](https://packagecontrol.io/): Package manager for Sublime Text
+2. [SideBarEnhancement](https://github.com/titoBouzout/SideBarEnhancements)
+3. [SublimeLinter](http://www.sublimelinter.com/en/stable/): Linting framework
+	- SublimeLinter-pycodestyle: Linter, basically PEP 8 (installed using Package Control)
+4. [MarkdownPreview](https://github.com/facelessuser/MarkdownPreview)
+5. [PEP8 Autoformat](https://github.com/wistful/SublimeAutoPEP8): Format code according to PEP8
+6. [TrailingSpaces](https://github.com/SublimeText/TrailingSpaces): Highlight and remove trailing spaces
+7. [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
+8. [ayu](https://github.com/dempfi/ayu): Very nice and modern looking theme
+9. [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
 
 ### Set-up to allow remote editing using Sublime Text 3
 Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instructions in the README. In particular
@@ -56,9 +51,6 @@ Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instr
 ```json
 {
 	"font_size": 14,
-	"ignored_packages":
-	[
-	],
 	"translate_tabs_to_spaces": true
 }
 ```
