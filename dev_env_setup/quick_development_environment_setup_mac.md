@@ -57,31 +57,16 @@ Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instr
 
 ## Useful, but not too important
 1. [Honer](https://github.com/puffnfresh/Honer.app): Draws a line around currently active window
+2. [zshmarks](https://github.com/jocelynmallon/zshmarks): Commandline directory bookmarking
+3. [trash-cli](http://hasseg.org/trash/): Avoid `rm -rf *` horror and move deleted files to trash instead (can be installed with `brew install trash`)
 
 ## A few useful things to add to .zshrc
 ```bash
-# customize prompt with nice colours
-# discussion of colors: https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
-# Color tag comes in the form of \[\033[COLORm\], where COLOR is a number
-# for the color of the foreground text (e.g. 30==Black, 36==Cyan)
-export PS1='\t \[\033[1;32m\]\W:\[\033[1;34m\]'
-# export PS1='\t \[\033[32m\]\W\[\033[30m\]☆'  # alternative
-export CLICOLOR=1
-export LSCOLORS=Fxfxcxdxbxegedabagacad
-export HISTCONTROL=ignoreboth:erasedups  # no duplicates in history
-
-# Use fzf copy directory path to clipboard
-# usage: cdf -> search directory or filename -> enter to copy directory to clipboard
-# tr -d '\n' before pbcopy removes next line character to avoid auto execution
-# in command line
-cdf() {
-   local file
-   local dir
-   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && echo "$dir" | tr -d '\n' | pbcopy
-}
-
+# Remove duplicates in history
+setopt HIST_IGNORE_ALL_DUPS
 alias zzz='pmset sleepnow'
 ```
+
 ## Useful Command Line Tools
 1. `man` replacement: [tldr](https://tldr.sh/#installation)
 2. `find` replacement: [fd](https://github.com/sharkdp/fd/)
