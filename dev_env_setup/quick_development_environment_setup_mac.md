@@ -56,13 +56,10 @@ Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instr
 ```
 
 ## Useful, but not necessary
-1. [__Install Honer__](https://github.com/puffnfresh/Honer.app)
+1. [Honer](https://github.com/puffnfresh/Honer.app): Draws a line around currently active window
 
-## A few useful things to add to .bash_profile
+## A few useful things to add to .zshrc
 ```bash
-# added by Anaconda3 installer
-export PATH="/anaconda3/bin:$PATH"
-
 # customize prompt with nice colors
 # discussion of colors: https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
 # Color tag comes in the form of \[\033[COLORm\], where COLOR is a number
@@ -83,7 +80,6 @@ cdf() {
    file=$(fzf +m -q "$1") && dir=$(dirname "$file") && echo "$dir" | tr -d '\n' | pbcopy
 }
 
-alias sub='open -a "/Applications/Sublime Text.app" '
 alias zzz='pmset sleepnow'
 ```
 ## Useful Command Line Tools
@@ -96,5 +92,3 @@ alias zzz='pmset sleepnow'
 ## Miscellaneous settings
 * Prevent switching deskstop spaces when switching to an application
 	- Go to System Preferences > Mission Control, deselect "When switching to an application, switch to a Space with open windows for the application"
-
-
