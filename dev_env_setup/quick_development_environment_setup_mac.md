@@ -24,15 +24,16 @@
 
 ## Sublime Text 3 Packages
 1. [Package Control](https://packagecontrol.io/): Package manager for Sublime Text
-2. [SideBarEnhancement](https://github.com/titoBouzout/SideBarEnhancements)
-3. [SublimeLinter](http://www.sublimelinter.com/en/stable/): Linting framework
+2. [AnacondaST3](http://damnwidget.github.io/anaconda/#): Full featured Python IDE for Sublime Text 3
+3. [SideBarEnhancement](https://github.com/titoBouzout/SideBarEnhancements)
+4. [SublimeLinter](http://www.sublimelinter.com/en/stable/): Linting framework
 	- SublimeLinter-pycodestyle: Linter, basically PEP 8 (installed using Package Control)
-4. [MarkdownPreview](https://github.com/facelessuser/MarkdownPreview)
-5. [PEP8 Autoformat](https://github.com/wistful/SublimeAutoPEP8): Format code according to PEP8
-6. [TrailingSpaces](https://github.com/SublimeText/TrailingSpaces): Highlight and remove trailing spaces
-7. [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
-8. [ayu](https://github.com/dempfi/ayu): Very nice and modern looking theme
-9. [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
+5. [MarkdownPreview](https://github.com/facelessuser/MarkdownPreview)
+6. [PEP8 Autoformat](https://github.com/wistful/SublimeAutoPEP8): Format code according to PEP8
+7. [TrailingSpaces](https://github.com/SublimeText/TrailingSpaces): Highlight and remove trailing spaces
+8. [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
+9. [ayu](https://github.com/dempfi/ayu): Very nice and modern looking theme
+10. [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
 
 ### Set-up to allow remote editing using Sublime Text 3
 Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instructions in the README. In particular
