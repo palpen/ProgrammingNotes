@@ -1,4 +1,6 @@
-# Pandas Code Snippets
+# Notes on Pandas
+
+## Code Snippets
 
 1. Loop through each column and convert object to integer
 ```python
@@ -26,3 +28,7 @@ ax = df.plot('x_col', figsize=(14, 9))  # x_col is column in x-axis; figsize=(wi
 fig = ax.get_figure()
 fig.savefig('myplot.png')
 ```
+
+## Settings
+
+* Increase number of rows to display: `pd.set_option('display.max_rows', 1000)`
