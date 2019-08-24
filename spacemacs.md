@@ -61,10 +61,9 @@ M-x, then search `delete-trailing-whitespace` -> Removes all trailing whitespace
 
 ## Configuring Spacemacs
 
-__How to change default font__
+Spacemacs can be customized using ``~/.spacemacs``
 
-In `~/.spacemacs` look for
-
+* How to change default font
 ```
  dotspacemacs-default-font '("Source Code Pro"
                                :size 17
@@ -72,8 +71,7 @@ In `~/.spacemacs` look for
                                :width normal
                                :powerline-scale 1.1)
 ```
-
-and edit the `size` parameter
+* Add line numbers: `dotspacemacs-line-numbers t`
 
 ## Resources
 - [A Guided Tour of (original) Emacs](https://www.gnu.org/software/emacs/tour/index.html)
