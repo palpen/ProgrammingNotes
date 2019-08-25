@@ -78,3 +78,7 @@ alias zzz='pmset sleepnow'
 ## Miscellaneous settings
 * Prevent switching deskstop spaces when switching to an application
 	- Go to System Preferences > Mission Control, deselect "When switching to an application, switch to a Space with open windows for the application"
+
+* Restore windows, tabs, and panes when restarting Iterm2
+    * In Iterm2 under Preferences > General > Startup set the Window restoration policy to "Use System Window Restoration Setting"
+    * In MacOS, go to System Preferences > General and uncheck "Close windows when quitting an app"
