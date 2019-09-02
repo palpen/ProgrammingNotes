@@ -30,7 +30,10 @@ C-g -> Cancel current action
 C-x C-f -> Open a file (whether or not it exist)
 C-x C-s -> Save file
 C-x C-w -> Write a file (Save as...)
-M-x cd -> Change working directory of current session
+
+# Emacs commands (M-x)
+cd -> Change working directory of current session
+pwd -> Print current directory
 ```
 
 ### Buffers and Windows
@@ -54,7 +57,10 @@ M-; -> Apply line comment to selected line
 ```
 
 ### Spacemacs specific commands
+```
 SPC s c -> Clear search highlight
+SPC T M -> Maximize frame (window take up full height of screen)
+```
 
 ### Misc. Commands
 M-x, then search `delete-trailing-whitespace` -> Removes all trailing whitespace
@@ -72,6 +78,13 @@ Spacemacs can be customized using ``~/.spacemacs``
                                :powerline-scale 1.1)
 ```
 * Add line numbers: `dotspacemacs-line-numbers t`
+* How to make window use 100% of screen. Add `frame-resize-pixelwise t` in `setq-default`:
+```
+(setq-default
+ frame-resize-pixelwise t
+ ...
+)
+```
 
 ## Resources
 - [A Guided Tour of (original) Emacs](https://www.gnu.org/software/emacs/tour/index.html)
