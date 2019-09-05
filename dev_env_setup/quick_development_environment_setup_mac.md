@@ -34,6 +34,18 @@
 8. [Origami](https://github.com/SublimeText/Origami): Create, destroy, zoom into panes using keyboard shortcuts
 9. [ayu](https://github.com/dempfi/ayu): Very nice and modern looking theme
 10. [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous): Vim emulator
+	* Must add the following to Sublime Text preferences to work properly:
+	```
+	...
+		"ignored_packages":
+	[
+		"Six",
+		"Vintage",
+		"Vintageous"
+	],
+	"vintageous_use_ctrl_keys": true,
+	...
+	```
 
 ### Set-up to allow remote editing using Sublime Text 3
 Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instructions in the README. In particular
