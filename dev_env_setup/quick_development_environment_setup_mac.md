@@ -37,7 +37,7 @@
 	* Must add the following to Sublime Text preferences to work properly:
 	```
 	...
-		"ignored_packages":
+	"ignored_packages":
 	[
 		"Six",
 		"Vintage",
