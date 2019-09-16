@@ -44,19 +44,19 @@ def f_consume_now(file, client):
     return "Processed " + file, client
 
 
-def run_consume_now(f, my_iter, number_workers=10):
+def run_consume_now(f, args, number_workers=10):
 
     final_results = []
 
     with concurrent.futures.ThreadPoolExecutor(number_workers) as executor:
 
         results = {
-            executor.submit(lambda p: f(*p), item): item for item in my_iter
+            executor.submit(lambda p: f(*p), item): a for a in args
             }
 
         completed_results = concurrent.futures.as_completed(results)
 
-        for future in tqdm(completed_results, total=len(my_iter)):
+        for future in tqdm(completed_results, total=len(args)):
             processed_file, client = future.result()
             final_results.append((processed_file, client))
 
