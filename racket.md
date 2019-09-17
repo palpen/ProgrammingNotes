@@ -13,7 +13,7 @@
 (cube 3)
 >>> 27
 ```
-In general, `(e x)` means to evaluate the expression `e` with argument `x`. `(e)` means evaluate with zero arguments.
+In general, `(e x)` means to evaluate the expression `e` with argument `x`. `(e)` means to evaluate the expression with zero arguments.
 
 ## Lists
 * Creating lists
