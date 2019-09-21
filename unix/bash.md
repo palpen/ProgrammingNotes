@@ -1,3 +1,7 @@
+# Notes on bash and shell
+
+## Shortcuts
+Alt + d -> Delete one word forward
 
 ## Basic Operations
 1. Declare an array and loop through its contents
