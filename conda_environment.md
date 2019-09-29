@@ -48,7 +48,7 @@ dependencies:
 - If you insist in doing this, the command is `conda env export > environment.yml`
 
 ### How to delete an environment
-- `conda remove --name flowers --all`
+- `conda remove --name myenv --all`
 
 ### Automatically activate an environment when you cd into it
 - Install autoenv: `pip install autoenv && source activate.sh`
