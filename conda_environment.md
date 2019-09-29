@@ -20,6 +20,10 @@ conda activate myenv
     - If you are in the directory where `environment.yml` lives, just run `conda env create`
 - Activate the environment with `conda activate myenv`
 
+### How to update an environment with new packages
+- Add the new package you want to add to the environment in the yaml file
+- Execute `conda env update --file environment.yml`
+
 ### Pip install in conda
 See note below on __Setting channels in environment file__ for an alternative approach
 
@@ -52,8 +56,7 @@ dependencies:
 - Now every time you enter that folder from the command line the virtual environment will be activated.
 
 ### Virtual environment best practices
-- Environments should be 
-- References:
+- See below for great guides on best practices in regards to creation and management of environments:
   - https://stackoverflow.com/questions/39280638/how-to-share-conda-environments-across-platforms
   - https://github.com/conda/conda/tree/master/conda_env
   - https://conda.io/docs/user-guide/tasks/manage-environments.html
