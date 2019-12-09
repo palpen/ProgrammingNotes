@@ -22,6 +22,14 @@ See: https://www.blockloop.io/mastering-bash-and-terminal/
 3. bg - tell the most recent background process to continue running in the background
 4. fg - bring the most recent background process back to the foreground
 5. disown -h - disown the most recent background job. This will remove it from your current tty session. It will not be able to be brought back to the foreground. You will have to control it either with kill or something else.
+6. To kill a running process, find job number and execute `kill %<JOB_NUMBER>` ([source](https://unix.stackexchange.com/questions/104821/how-to-terminate-a-background-process/104825)):
+    ```
+    $ jobs
+    [1]+  Running                 my_script.py
+
+    $ kill %1
+    [1]+  Terminated              my_script.py
+    ```
 
 ## SSH and Networking
 1. Copy the `sourcedirectory` folder from local directory to `remotedirectory` folder in the remote server:
