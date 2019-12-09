@@ -30,7 +30,7 @@ followed by the key for the desired action.
 ```
 s list all active sessions (to switch to it)
 d detach/leave from session
->> tmux attach: attach to tmux session 
+>> tmux attach: attach to tmux session
 ```
 
 ### Windows (tabs)
@@ -46,10 +46,10 @@ x kill (close) pane
 
 →, ←, ↑, ↓ move between panes
 
-[ Scroll in pane 
+[ Scroll in pane
     * Use arrow keys to move in pane or fn + arrow key to skip a page
     * To quit scroll mode, press q
-    
+
 Alt + →, ←, ↑, ↓ resize panes
 ```
 
