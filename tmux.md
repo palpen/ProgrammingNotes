@@ -16,6 +16,11 @@ Start a new tmux session:
 
 `tmux`
 
+## Commands for outside tmux session
+* List tmux sessions: `tmux list-sessions`
+* Attach to a tmux session: `tmux a -t <SESSION NUMBER>` (e.g. the 0 in `0: 1 windows (created Tue Dec 10 15:57:09 2019) [110x44]`)
+    * Session number can be found using `tmux list-sessions`
+
 ## Shortcuts
 
 Before any of the single character shortcuts below, hit the prefix
