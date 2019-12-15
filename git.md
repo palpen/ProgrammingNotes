@@ -128,7 +128,7 @@ Comparing branches
 
 ## Check if there is merge conflict between two branches
 [source](https://stackoverflow.com/a/10879368)
-Suppose you want to `dev` into `master`, in `master` branch, do:
+Suppose you want to check if there are merge conflicts betwen `dev` and `master`. In `master` branch, do:
     `git merge dev --no-ff --no-commit`
 
 
