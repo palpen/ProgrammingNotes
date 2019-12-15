@@ -1,5 +1,10 @@
 # Basic Git and GitHub Workflow
 
+## Definitions
+* `HEAD`: latest commit on the current branch. To see where HEAD is pointing to, do `cat .git/HEAD`. Defined only for local branches in local repository.
+* `working tree`: "files that you are currently working on."([source](https://stackoverflow.com/a/29625893)), the same as `HEAD` upon checkout
+
+
 ## Setting Up a Repository
 
 1. Create a folder that will contain the codes you will version control
@@ -102,6 +107,24 @@ To return to the master branch from the new branch:
 Similarly, from the master branch, you can switch to your newly created branch using the same command above:
 
     git checkout <branch-name>
+
+## Various ways to `git diff`
+__Examples below draw from EXAMPLES section of `git diff --help`__
+
+Checking your working tree
+`git diff`: compare index with working tree
+`git diff --cached`: compare staged (index) with most recent commit (HEAD)
+`git diff HEAD`: compare most recent commit (HEAD) with all changes (shows difference between working tree or index and HEAD); what you would be committing if you run "git commit -a"
+
+Comparing with arbitrary commits
+`git diff test`: instead of using the tip of the current branch, compare with the tip of "test" branch
+`git diff HEAD -- ./test.txt`: compare most recent commit (HEAD) with any changes in test.txt
+`git diff HEAD^ HEAD`: compare the version before the last commit and the last commit
+
+Comparing branches
+`git diff topic master`: compare between the tips of the topic and the master branches
+`git diff topic..master`: same as above
+`git diff topic...master`: changes that occurred on the master branch since when the topic branch was started off it.
 
 ## Credential Caching
 
