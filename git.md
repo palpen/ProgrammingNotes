@@ -126,6 +126,12 @@ Comparing branches
 `git diff topic..master`: same as above
 `git diff topic...master`: changes that occurred on the master branch since when the topic branch was started off it.
 
+## Check if there is merge conflict between two branches
+[source](https://stackoverflow.com/a/10879368)
+Suppose you want to `dev` into `master`, in `master` branch, do:
+    `git merge dev --no-ff --no-commit`
+
+
 ## Credential Caching
 
 You've cloned a repository using a url beginning with HTTPS (e.g. https://github.com/username/reponame.git). Every time you push to the remote repository it asks you for your username and password. To avoid this, enable credential caching for the repository by executing the following commands in the terminal
