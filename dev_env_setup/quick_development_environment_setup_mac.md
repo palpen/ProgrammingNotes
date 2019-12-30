@@ -3,19 +3,20 @@
 ## Must Have
 1. [SublimeText](https://www.sublimetext.com/): Text editor
 	- Add `alias subl='open -a "/Applications/Sublime Text.app" '` to start-up script
-2. [Iterm2](https://www.iterm2.com/): Better terminal emulator than Terminal
+2. [XCode](https://developer.apple.com/xcode/): MacOS developer tools
+	- `xcode-select --install`
+3. [Homebrew](https://brew.sh/): Package manager for MacOS
+4. [Iterm2](https://www.iterm2.com/): Better terminal emulator than Terminal
 	- Enable command line key navigation using Alt (Option) button:
 		- In Iterm, hit Command + O, to open profiles. Click `Edit Profiles…` and under the `Keys` tab, select `Esc+` for both Left and Right Option key (Source: https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf)
 	- See `iterm2_profile` folder for custom settings
 		- See http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/
-	- Install and set up __Oh-My-Zsh__
-3. [Miniconda](https://docs.conda.io/en/latest/miniconda.html): Lightweight version of [Anaconda](https://www.anaconda.com/distribution/)
+5. [zsh](https://www.zsh.org/) and [Oh-My-Zsh](https://ohmyz.sh/): Zsh shell and its framework
+	* Zsh may be installed by homebrew
+6. [Miniconda](https://docs.conda.io/en/latest/miniconda.html): Lightweight version of [Anaconda](https://www.anaconda.com/distribution/)
     - Move conda initializer from `.bash_profile` to `.zshrc`
-4. [Spectacle](https://www.spectacleapp.com/): Window manager
-5. [XCode](https://developer.apple.com/xcode/): MacOS developer tools
-	- `xcode-select --install`
-6. [Homebrew](https://brew.sh/): Package manager for MacOS
-7. Google Chrome with Vimium Extension
+7. [Spectacle](https://www.spectacleapp.com/): Window manager
+8. Google Chrome with Vimium Extension
 
 ## If Necessary
 1. Docker
@@ -47,17 +48,6 @@
 	...
 	```
 
-### Set-up to allow remote editing using Sublime Text 3
-Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instructions in the README. In particular
-* `mv /usr/local/bin/rmate /usr/local/bin/rsubl` to give command a more intuitive name
-* Add to SSH config in `~/.ssh/config`
-	```
-	Host myremote
-		HostName HOSTNAME
-		RemoteForward 52698 localhost:52698
-		User USERNAME
-	```
-	so that connection is as simple as `ssh myremote`
 
 ### Things to add to user preferences
 * Put these in the `Preferences.sublime-settings--User` file found in Preferences > Settings (or by pressing Command + ,)
@@ -67,6 +57,15 @@ Install [RemoteSubl](https://github.com/randy3k/RemoteSubl) and follow all instr
 	"translate_tabs_to_spaces": true
 }
 ```
+
+## Setup Terminal Theme
+
+
+
+The files `palermo.zsh-theme` and `palermo-profile-iterm2.json` are complimentary and sets up the ideal themes for Zsh shell and the Iterm2 terminal:
+* Move `palermo.zsh-theme` to `~/.oh-my-zsh/themes` then in `~/.zshrc`, set ZSH_THEME to `palermo`
+* In Iterm2, go to __Preferences__, then __Profiles__. In the bottom left corner of the __Profile__ tab, click __Other Actions...__. From there select `Import JSON Profiles` and select `palermo-profile-iterm2.json`
+
 
 ## Useful, but not too important
 1. [Honer](https://github.com/puffnfresh/Honer.app): Draws a line around currently active window
