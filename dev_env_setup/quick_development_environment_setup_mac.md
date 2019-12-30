@@ -60,23 +60,25 @@
 
 ## Setup Terminal Theme
 
+The files `palermo.zsh-theme` and `palermo-profile-iterm2.json` are complimentary and sets up the ideal theme for Zsh shell and the Iterm2 terminal:
 
-
-The files `palermo.zsh-theme` and `palermo-profile-iterm2.json` are complimentary and sets up the ideal themes for Zsh shell and the Iterm2 terminal:
 * Move `palermo.zsh-theme` to `~/.oh-my-zsh/themes` then in `~/.zshrc`, set ZSH_THEME to `palermo`
+
 * In Iterm2, go to __Preferences__, then __Profiles__. In the bottom left corner of the __Profile__ tab, click __Other Actions...__. From there select `Import JSON Profiles` and select `palermo-profile-iterm2.json`
 
+Here's how it looks like
+
+![alt text](theme0.png)
 
 ## Useful, but not too important
-1. [Honer](https://github.com/puffnfresh/Honer.app): Draws a line around currently active window
-2. [zshmarks](https://github.com/jocelynmallon/zshmarks): Commandline directory bookmarking
-3. [trash-cli](http://hasseg.org/trash/): Avoid `rm -rf *` horror and move deleted files to trash instead (can be installed with `brew install trash`)
+1. [zshmarks](https://github.com/jocelynmallon/zshmarks): Commandline directory bookmarking
+2. [trash-cli](http://hasseg.org/trash/): Avoid `rm -rf *` horror and move deleted files to trash instead (can be installed with `brew install trash`)
 
-## A few useful things to add to .zshrc
+## Useful settings and aliases to add to .zshrc
 ```bash
 # Remove duplicates in history
 setopt HIST_IGNORE_ALL_DUPS
-alias zzz='pmset sleepnow'
+alias jn='jupyter notebook'
 ```
 
 ## Useful Command Line Tools
