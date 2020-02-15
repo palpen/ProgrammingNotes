@@ -34,6 +34,8 @@ D -> delete from cursor to end of line (characterwise)
 * How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
 * Copy to clipboard
     * Visually select segment to copy, then `:w !pbcopy`
+* Display name of current file: Control + g
+
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
 * To configure the editor created an `init.vim` file in `~/.config/nvim`. Use `init.vim` the same way you would use a `.vimrc` file.
