@@ -28,13 +28,14 @@ D -> delete from cursor to end of line (characterwise)
 * Place a # in front of every line: `:%s/^/#/`
 * Place a , at the end of every line: `:%s/$/,/`
 
-## Commands
+## Commands and shortcuts
 * Insert blank line below cursor (in command mode): `control + o`
     * Not really a vim command but works in Sublime Text using NeoVintageous
 * How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
 * Copy to clipboard
     * Visually select segment to copy, then `:w !pbcopy`
 * Display name of current file: Control + g
+* Search for word under cursor (in vim): place cursor on word then press, * (Shift + 8)
 
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
