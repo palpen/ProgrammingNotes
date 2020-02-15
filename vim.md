@@ -32,7 +32,8 @@ D -> delete from cursor to end of line (characterwise)
 * Insert blank line below cursor (in command mode): `control + o`
     * Not really a vim command but works in Sublime Text using NeoVintageous
 * How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
-
+* Copy to clipboard
+    * Visually select segment to copy, then `:w !pbcopy`
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
 * To configure the editor created an `init.vim` file in `~/.config/nvim`. Use `init.vim` the same way you would use a `.vimrc` file.
@@ -55,10 +56,14 @@ set autoindent
 set shiftwidth=4
 set smartindent
 set smarttab
+set statusline=2
+set statusline=%f
 set softtabstop=4
 set ruler
 set undolevels=1000
 set backspace=indent,eol,start
+set belloff=all
+color desert
 syntax on
 ```
 
