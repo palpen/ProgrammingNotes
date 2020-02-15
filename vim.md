@@ -68,6 +68,9 @@ set backspace=indent,eol,start
 set belloff=all
 color desert
 syntax on
+
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 ```
 
 ## Basic Vim Setup on Remote Server
