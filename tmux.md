@@ -55,7 +55,23 @@ x kill (close) pane
     * Use arrow keys to move in pane or fn + arrow key to skip a page
     * To quit scroll mode, press q
 
-Alt + →, ←, ↑, ↓ resize panes
+ESC + →, ←, ↑, ↓ resize panes
+```
+
+#### Alternative way to resize panes
+```
+Control + B
+:resize-pane -D 10
+:resize-pane -U 10
+:resize-pane -L 10
+:resize-pane -R 10
+```
+
+To equally balance layout of panes:
+```
+Control + B
+:select-layout even-vertical
+:select-layout even-horizontal
 ```
 
 ## Copy / Pasting in tmux
