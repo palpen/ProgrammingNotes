@@ -52,6 +52,7 @@ set textwidth=100
 set showmatch
 set visualbell
 set hlsearch
+set expandtab
 set smartcase
 set ignorecase
 set incsearch
