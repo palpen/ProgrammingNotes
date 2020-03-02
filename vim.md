@@ -36,6 +36,9 @@ D -> delete from cursor to end of line (characterwise)
     * Visually select segment to copy, then `:w !pbcopy`
 * Display name of current file: Control + g
 * Search for word under cursor (in vim): place cursor on word then press, * (Shift + 8)
+* Delete character across selected group spanning multiple lines
+    * https://stackoverflow.com/a/48952069/3649966
+    * Use visual-block to highlight lines, then ":", then "%normal $x", then hit enter
 
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
