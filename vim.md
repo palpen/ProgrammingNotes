@@ -28,6 +28,7 @@ D -> delete from cursor to end of line (characterwise)
 vims way of editing multiple files within the same vim session.
 
 * To open a file in the same vim session, do `:e <FILENAME>`
+* To list files in the buffer, do `:ls`
 * To toggle across files in the buffer, do `:b <TAB>`
     * One can also type name of the file in the buffer or its number
     * `:b myfile.py` or `:b 2`
