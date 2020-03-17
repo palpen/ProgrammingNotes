@@ -32,6 +32,7 @@ vims way of editing multiple files within the same vim session.
 * To toggle across files in the buffer, do `:b <TAB>`
     * One can also type name of the file in the buffer or its number
     * `:b myfile.py` or `:b 2`
+* To toggle / switch between current and previous buffer, do `Control + 6`
 
 ## Search and replace
 * Place a # in front of every line: `:%s/^/#/`
