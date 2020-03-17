@@ -97,6 +97,12 @@ fun! TrimWhitespace()
 endfun
 ```
 
+## Preview markdown files
+* Install the Google Chrome browser
+* Install the MarkDown Preview Plus Extension on Chrome (follow usage instructions)
+    * Chrome > Preferences > Markdown Preview Plus > Enable `Allow access to file URLs`
+* in Vim, open markdow file by `:!open -a /Applications/Google\ Chrome.app mymarkdownfile.md`
+
 ## Basic Vim Setup on Remote Server
 
 ___tmux + vim + gruvbox color scheme___
