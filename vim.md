@@ -65,17 +65,19 @@ set textwidth=100
 set showmatch
 set visualbell
 set hlsearch
-set expandtab
 set smartcase
 set ignorecase
 set incsearch
 set autoindent
-set shiftwidth=4
 set smartindent
 set smarttab
+set expandtab
+set paste
 set statusline=2
 set statusline=%f
-set softtabstop=4
+set softtabstop=0 noexpandtab
+set shiftwidth=4
+set tabstop=4
 set ruler
 set undolevels=1000
 set backspace=indent,eol,start
@@ -83,10 +85,10 @@ set belloff=all
 color desert
 syntax on
 
+
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
-
-" Highlight trailing whitespaces
+" Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
