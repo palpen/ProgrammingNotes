@@ -4,6 +4,8 @@ I use [Sublime Text 3](https://www.sublimetext.com) with the [NeoVintageous](htt
 
 For basic vim motions and commands, type `vimtutor` in your command line if you are in a Unix environment.
 
+See [this page ](https://vimhelp.org/index.txt.html) for a list of all vim commands
+
 ## Motion
 Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select)
 * Select a word: `viw`
@@ -38,7 +40,12 @@ vims way of editing multiple files within the same vim session.
 * Place a # in front of every line: `:%s/^/#/`
 * Place a , at the end of every line: `:%s/$/,/`
 
-## Commands and shortcuts
+## Code folding
+* To fold a block of code, visually select the code to fold and do `zf`
+* To unfold at the cursor, do `zo`
+* To unfold all  folds, do `zO`
+
+## Other Commands and shortcuts
 * Insert blank line below cursor (in command mode): `control + o`
     * Not really a vim command but works in Sublime Text using NeoVintageous
 * How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
