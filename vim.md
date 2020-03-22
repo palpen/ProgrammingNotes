@@ -43,7 +43,7 @@ vims way of editing multiple files within the same vim session.
 ## Code folding
 * To fold a block of code, visually select the code to fold and do `zf`
 * To unfold at the cursor, do `zo`
-* To unfold all  folds, do `zO`
+* To unfold all folds in file, do `zR`
 
 ## Other Commands and shortcuts
 * Insert blank line below cursor (in command mode): `control + o`
