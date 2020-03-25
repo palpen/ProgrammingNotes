@@ -63,46 +63,8 @@ vims way of editing multiple files within the same vim session.
 * Color themes are stored in `~/.config/nvim/colors`
 	* Here's a useful color scheme [NeoSolarized](https://github.com/icymind/NeoSolarized)
 
-## Basic .vimrc
-```
-set number
-set linebreak
-set showbreak=+++
-set textwidth=100
-set showmatch
-set visualbell
-set hlsearch
-set smartcase
-set ignorecase
-set incsearch
-set autoindent
-set smartindent
-set smarttab
-set expandtab
-set paste
-set statusline=2
-set statusline=%f
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-set ruler
-set undolevels=1000
-set backspace=indent,eol,start
-set belloff=all
-color desert
-syntax on
-
-
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-" Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-```
+## .vimrc
+For vimrc file, see [this repository](https://github.com/palpen/config_files)
 
 ## Preview markdown files
 * Install the Google Chrome browser
