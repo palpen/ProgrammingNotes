@@ -81,6 +81,10 @@ setopt HIST_IGNORE_ALL_DUPS
 alias jn='jupyter notebook'
 ```
 
+## Vim and Tmux config files
+See https://github.com/palpen/config_files
+
+
 ## Useful Command Line Tools
 1. `man` replacement: [tldr](https://tldr.sh/#installation)
 2. `find` replacement: [fd](https://github.com/sharkdp/fd/)
