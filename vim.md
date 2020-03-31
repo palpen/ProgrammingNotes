@@ -1,7 +1,7 @@
 # Notes on Vim
 
 I use [Sublime Text 3](https://www.sublimetext.com) with the [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) plugin to use Vim key bindings.
-
+##########
 For basic vim motions and commands, type `vimtutor` in your command line if you are in a Unix environment.
 
 See [this page ](https://vimhelp.org/index.txt.html) for a list of all vim commands
@@ -35,6 +35,7 @@ vims way of editing multiple files within the same vim session.
     * One can also type name of the file in the buffer or its number
     * `:b myfile.py` or `:b 2`
 * To toggle / switch between current and previous buffer, do `Control + 6`
+* Remap Control + j or k to toggle buffers (see .vimrc file)
 
 ## Search and replace
 * Place a # in front of every line: `:%s/^/#/`
@@ -56,6 +57,7 @@ vims way of editing multiple files within the same vim session.
 * Delete character across selected group spanning multiple lines
     * https://stackoverflow.com/a/48952069/3649966
     * Use visual-block to highlight lines, then ":", then "%normal $x", then hit enter
+* Leader key: in normal mode, press `\`
 
 ## Configuring VimR
 * [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
