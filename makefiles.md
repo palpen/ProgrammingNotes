@@ -40,8 +40,11 @@ $(DIRS):
 
 ## Variable definitions
 $@ --> File name of the target of the rule
+
 $^ --> The names of all the prerequisites, with space between them
+
 $< --> The name of the first prerequisite
+
 |  --> order-only pre-requisite: see https://stackoverflow.com/questions/24821611/order-only-prerequisites-not-working-correctly-in-gnu-make/24856711
 
 * good reference: https://stackoverflow.com/questions/24821611/order-only-prerequisites-not-working-correctly-in-gnu-make/24856711
