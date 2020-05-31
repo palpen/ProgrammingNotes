@@ -4,7 +4,7 @@
 
 You must install tmux on the remote server you want to use it on
 
-Homebrew:
+Homebrew
 `brew install tmux`
 
 Debian / Ubuntu
@@ -15,11 +15,6 @@ Debian / Ubuntu
 Start a new tmux session:
 
 `tmux`
-
-## Commands for outside tmux session
-* List tmux sessions: `tmux list-sessions`
-* Attach to a tmux session: `tmux a -t <SESSION NUMBER>` (e.g. the 0 in `0: 1 windows (created Tue Dec 10 15:57:09 2019) [110x44]`)
-    * Session number can be found using `tmux list-sessions`
 
 ## Shortcuts
 
@@ -33,12 +28,25 @@ followed by the key for the desired action.
 
 ### Sessions
 ```
-s list all active sessions (to switch to it)
+s list all active sessions (or in CLI, tmux ls)
 d detach/leave from session
->> tmux attach: attach to tmux session
+:kill-session kills current session
+$ change session name
 ```
 
+Manipulating sessions from the shell,
+```
+tmux attach-session -t [SESSION-NAME]
+tmux rename-session [-t CURRENT-NAME [NEW-NAME]
+tmux ls --> List all active sessions
+```
 ### Windows (tabs)
+```
+c create new window
+n toggle to next window
+p toggle to previous window
+w interactively choose a window from across sessions
+```
 
 ### Panes
 
@@ -49,18 +57,18 @@ d detach/leave from session
 z toggle zoom in current active pane
 x kill (close) pane
 
+o switch to next pane
 →, ←, ↑, ↓ move between panes
 
 [ Scroll in pane
     * Use arrow keys to move in pane or fn + arrow key to skip a page
     * To quit scroll mode, press q
 
-ESC + →, ←, ↑, ↓ resize panes
+ESC + →, ←, ↑, ↓ resize panes  (must be repeated for repeated adjustment)
 ```
 
 #### Alternative way to resize panes
 ```
-Control + B
 :resize-pane -D 10
 :resize-pane -U 10
 :resize-pane -L 10
@@ -69,7 +77,6 @@ Control + B
 
 To equally balance layout of panes:
 ```
-Control + B
 :select-layout even-vertical
 :select-layout even-horizontal
 ```
