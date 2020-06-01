@@ -59,6 +59,7 @@ z toggle zoom in current active pane
 x kill (close) pane
 
 o switch to next pane
+; switch to previous pane
 →, ←, ↑, ↓ move between panes
 
 [ Scroll in pane
