@@ -32,6 +32,7 @@ s list all active sessions (or in CLI, tmux ls)
 d detach/leave from session
 :kill-session kills current session
 $ change session name
+s interactively switch sessions
 ```
 
 Manipulating sessions from the shell,
