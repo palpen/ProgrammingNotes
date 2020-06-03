@@ -1,11 +1,5 @@
 # Notes on Vim
 
-I use [Sublime Text 3](https://www.sublimetext.com) with the [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) plugin to use Vim key bindings.
-##########
-For basic vim motions and commands, type `vimtutor` in your command line if you are in a Unix environment.
-
-See [this page ](https://vimhelp.org/index.txt.html) for a list of all vim commands
-
 ## Motion
 Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select)
 * Select a word: `viw`
@@ -45,6 +39,29 @@ vims way of editing multiple files within the same vim session.
 * To fold a block of code, visually select the code to fold and do `zf`
 * To unfold at the cursor, do `zo`
 * To unfold all folds in file, do `zR`
+
+## Convert a comma-delimited row of text into a column (and vice versa)
+
+```
+a,b,c,d,e,f,g
+```
+
+- Visually select row with `Shift + v`
+- Then in `:` mode, do `s/,/,\r/g`. `\r` is for carriage return.
+- Specifically, `:'<,'>s/,/,\r/g`
+
+```
+a,
+b,
+c,
+d,
+e,
+f,
+g
+
+```
+- To convert back to a row, visually select block of text with `Control +V`, then go to end of line with `$`
+- In `:` mode, do `s/\n//g`
 
 ## Other Commands and shortcuts
 * Insert blank line below cursor (in command mode): `control + o`
