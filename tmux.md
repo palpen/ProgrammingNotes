@@ -69,6 +69,10 @@ o switch to next pane
 ESC + →, ←, ↑, ↓ resize panes  (must be repeated for repeated adjustment)
 ```
 
+#### Joining pane to a window
+Look for the name of the window you want to join your pane to (using `Prefix + w`). Then do,
+`:join-pane -s <NAME OF SRC PANE> -t <NAME of DESTINATION PANE>`
+
 #### Alternative way to resize panes
 ```
 :resize-pane -D 10
