@@ -13,7 +13,11 @@
 
 * Build an image from Dockerfile in current dir and tag the image
 ```
+# Uses Dockerfile by default
 docker build -t myimage:1.0 .
+
+# Use Dockerfile.local to build image
+docker build -f Dockerfile.local -t myimage:1.0 .
 ```
 
 * List all images locally stored images
@@ -21,17 +25,28 @@ docker build -t myimage:1.0 .
 docker image ls
 ```
 
+## Run
+
+*  Run bash in a container in interactive mode
+Say you have the `myimage` image (check with `docker image`). To access bash in its container in interactive mode, run
+```bash
+docker run -i -t myimage bash
+```
+* List all running containers
+```
+docker container ls
+```
+
+## Housekeeping (cleaning up images and containers)
+
 * Delete image from local image store
 ```
 docker image rm myimage:1.0
 ```
 
-## Run
-
-1. Run bash in a container in interactive mode:
-Say you have the `ubuntu` image (check with `docker image`). To access bash in its container in interactive mode, run
-```bash
-docker run -i -t ubuntu bash
+* Remove all stopped containers and all unused images and build cache
+```
+docker system prune -a
 ```
 
 # Useful Docker commands
@@ -48,8 +63,6 @@ docker run -i -t ubuntu bash
 5. How to exit docker container in interactive mode
 	- Just type `exit`
 6. Delete image by image id: `docker rmi <IMAGE ID>`
-7. List all images: `docker images`
-8. List all containers: `docker ps`
 9. Kill an active container: `docker kill <CONTAINER ID>`
 
 # Dockerfile
