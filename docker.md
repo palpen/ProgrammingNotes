@@ -26,6 +26,10 @@ docker image ls
 ```
 
 ## Run
+* Run built image
+```
+docker run -t myimage
+```
 
 *  Run bash in a container in interactive mode
 Say you have the `myimage` image (check with `docker image`). To access bash in its container in interactive mode, run
