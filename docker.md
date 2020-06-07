@@ -9,6 +9,25 @@
 
 # Getting Started
 
+## Build
+
+* Build an image from Dockerfile in current dir and tag the image
+```
+docker build -t myimage:1.0 .
+```
+
+* List all images locally stored images
+```
+docker image ls
+```
+
+* Delete image from local image store
+```
+docker image rm myimage:1.0
+```
+
+## Run
+
 1. Run bash in a container in interactive mode:
 Say you have the `ubuntu` image (check with `docker image`). To access bash in its container in interactive mode, run
 ```bash
