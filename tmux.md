@@ -89,6 +89,11 @@ To equally balance layout of panes:
 
 ## Copy / Pasting in tmux
 * See https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
+```
+Prefix [ : enter copy mode (also scroll mode)
+Control + Space : begin selecting block of text you want to copy
+Alt + w : copy the selected text to the system clipboard
+```
 
 ## Killing Sessions
 There are various ways:
