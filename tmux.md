@@ -47,6 +47,7 @@ c create new window
 n toggle to next window
 p toggle to previous window
 w interactively choose a window from across sessions
+& kill / terminate current window (destroys all panes within it)
 ```
 
 ### Panes
@@ -69,9 +70,10 @@ o switch to next pane
 ESC + →, ←, ↑, ↓ resize panes  (must be repeated for repeated adjustment)
 ```
 
-#### Joining pane to a window
-Look for the name of the window you want to join your pane to (using `Prefix + w`). Then do,
-`:join-pane -s <NAME OF SRC PANE> -t <NAME of DESTINATION PANE>`
+#### Joining a pane to a window
+- First, break the pane to a new window with `<Prefix> !`
+- Next, bind window containing the pane to the desired window with `:join-pane -t <NAME OF DESTINATION WINDOW>`
+- You can use the `-h` or `-v` option in `join-pane` to bind horizontally or vertically
 
 #### Alternative way to resize panes
 ```
