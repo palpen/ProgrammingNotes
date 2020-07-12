@@ -17,6 +17,10 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 ## Delete, yank and put
 D -> delete from cursor to end of line (characterwise)
 
+## Delete and insert
+* `S` or `cc` to delete current line and enter insert mode.
+    * `3S` deletes the next 3 lines
+
 ### Inserting a line in the middle of another line
 `dd` will do a linewise deletion, which following a put command, `P` or `p`, will either insert the deleted line before or after the line in which the cursor is located. To insert the deleted line at the cursor position, do a characterwise deletion, `0D` (0 will move cursor to the begining of the line and `D` will do a characerwise deletion from the cursor to the end of the line). See https://vimhelp.org/motion.txt.html#linewise
 
