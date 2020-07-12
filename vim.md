@@ -1,9 +1,5 @@
 # Notes on Vim
 
-I use [Sublime Text 3](https://www.sublimetext.com) with the [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) plugin to use Vim key bindings.
-
-For basic vim motions and commands, type `vimtutor` in your command line if you are in a Unix environment.
-
 ## Motion
 Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select)
 * Select a word: `viw`
@@ -24,21 +20,72 @@ D -> delete from cursor to end of line (characterwise)
 ### Inserting a line in the middle of another line
 `dd` will do a linewise deletion, which following a put command, `P` or `p`, will either insert the deleted line before or after the line in which the cursor is located. To insert the deleted line at the cursor position, do a characterwise deletion, `0D` (0 will move cursor to the begining of the line and `D` will do a characerwise deletion from the cursor to the end of the line). See https://vimhelp.org/motion.txt.html#linewise
 
+## Buffers
+vims way of editing multiple files within the same vim session.
+
+* To open a file in the same vim session, do `:e <FILENAME>`
+* To list files in the buffer, do `:ls`
+* To toggle across files in the buffer, do `:b <TAB>`
+    * One can also type name of the file in the buffer or its number
+    * `:b myfile.py` or `:b 2`
+* To toggle / switch between current and previous buffer, do `Control + 6`
+* Remap Control + j or k to toggle buffers (see .vimrc file)
+
 ## Search and replace
 * Place a # in front of every line: `:%s/^/#/`
 * Place a , at the end of every line: `:%s/$/,/`
+* Using `gn` to change text that match the current search pattern
+    * Search the word using `/`
+    * In normal mode, do `cgn` to change matched text under cursor
+    * To change subsequent matches, hit `.` (no need to hit `n`)
 
-## Commands
-* Insert blank line below cursor (in command mode): `control + o`
-    * Not really a vim command but works in Sublime Text using NeoVintageous
+## Code folding
+* To fold a block of code, visually select the code to fold and do `zf`
+* To unfold at the cursor, do `zo`
+* To unfold all folds in file, do `zR`
+
+## Convert a comma-delimited row of text into a column (and vice versa)
+
+```
+a,b,c,d,e,f,g
+```
+
+- Visually select row with `Shift + v`
+- Then in `:` mode, do `s/,/,\r/g`. `\r` is for carriage return.
+- Specifically, `:'<,'>s/,/,\r/g`
+
+```
+a,
+b,
+c,
+d,
+e,
+f,
+g
+
+```
+- To convert back to a row, visually select block of text with `Control +V`, then go to end of line with `$`
+- In `:` mode, do `s/\n//g`
+
+## Other Commands and shortcuts
 * How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
+* Copy to clipboard
+    * Visually select segment to copy, then `:w !pbcopy`
+* Display name of current file: Control + g
+* Search for word under cursor (in vim): place cursor on word then press, * (Shift + 8)
+* Delete character across visually selected group of text spanning multiple lines
+    * https://stackoverflow.com/a/48952069/3649966
+    * Use visual-block to highlight lines, then ":", then "%normal $x", then hit enter
+* Leader key: in normal mode, press `\`
 
-## Configuring VimR
-* [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
-* To configure the editor created an `init.vim` file in `~/.config/nvim`. Use `init.vim` the same way you would use a `.vimrc` file.
-* Color themes are stored in `~/.config/nvim/colors`
-	* Here's a useful color scheme [NeoSolarized](https://github.com/icymind/NeoSolarized)
+## .vimrc
+For vimrc file, see [this repository](https://github.com/palpen/config_files)
 
+## Preview markdown files
+* Install the Google Chrome browser
+* Install the MarkDown Preview Plus Extension on Chrome (follow usage instructions)
+    * Chrome > Preferences > Markdown Preview Plus > Enable `Allow access to file URLs`
+* in Vim, open markdow file by `:!open -a /Applications/Google\ Chrome.app mymarkdownfile.md`
 
 ## Splitting windows
 Pane, window, split same file
@@ -48,28 +95,56 @@ Pane, window, split same file
 * `:close` closes the split
 * To equalize the splits, `Control + w` then `=`
 
-## Basic .vimrc
+## Macros
+
+For complicated edits involving multiple lines of variable lengths, use macros. For example, suppose you wanted to enclose the text before the colon in quotes and add a comma at the end to turn it into a dictionary
+
 ```
-set number
-set linebreak
-set showbreak=+++
-set textwidth=100
-set showmatch
-set visualbell
-set hlsearch
-set smartcase
-set ignorecase
-set incsearch
-set autoindent
-set shiftwidth=4
-set smartindent
-set smarttab
-set softtabstop=4
-set ruler
-set undolevels=1000
-set backspace=indent,eol,start
-syntax on
+var: 1
+longvar: 2
+verylongvar: 3
 ```
+
+Record a macro that applies the desired operations on the first line, then apply the recorded macro on the subsequent lines by visually selecting those lines and doing `'<,'> norm @q` where `q` is the register where the macros is stored.
+
+The sequence of characters when recording would be
+
+```
+qq
+^"f:i"$,
+q
+```
+records the macro and applies it to the first line. Then visually select the subsequent lines and do
+
+```
+:'<,'>norm @q
+```
+
+The result should be
+
+```
+"var": 1,
+"longvar": 2,
+"verylongvar": 3,
+```
+
+### Recording
+* To record a macro, in register w, do `qw` in normal mode
+    * You can use any letter from a to z to store macros
+* To use the recorded macro (stored in register w) do, `@w`. To use it 10 times, do `10@w`
+* To apply to all visually selected lines, select the lines and do `'<,'> norm @a`
+
+### Tips
+* Use motions such as `w`, `b`, `^`, etc and not `hjkl` if lines are not the same length
+
+# Deprecated
+
+## Configuring VimR
+* [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
+* To configure the editor created an `init.vim` file in `~/.config/nvim`. Use `init.vim` the same way you would use a `.vimrc` file.
+* Color themes are stored in `~/.config/nvim/colors`
+	* Here's a useful color scheme [NeoSolarized](https://github.com/icymind/NeoSolarized)
+
 
 ## Basic Vim Setup on Remote Server
 
