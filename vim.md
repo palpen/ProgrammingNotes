@@ -39,6 +39,15 @@ D -> delete from cursor to end of line (characterwise)
 * Color themes are stored in `~/.config/nvim/colors`
 	* Here's a useful color scheme [NeoSolarized](https://github.com/icymind/NeoSolarized)
 
+
+## Splitting windows
+Pane, window, split same file
+
+* `:split` creates a horizontal split of the file
+* To navigate across splits, do `Control + w` then `h, j, k, or l`
+* `:close` closes the split
+* To equalize the splits, `Control + w` then `=`
+
 ## Basic .vimrc
 ```
 set number
