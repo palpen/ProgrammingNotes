@@ -28,11 +28,12 @@ followed by the key for the desired action.
 
 ### Sessions
 ```
-s list all active sessions (or in CLI, tmux ls)
-d detach/leave from session
-:kill-session kills current session
-$ change session name
-s interactively switch sessions
+:new<CR>              create new session
+s                     list all active sessions (or in CLI, tmux ls)
+d                     detach/leave from session
+:kill-session<CR>     kills current session
+$                     change session name
+s                     interactively switch sessions
 ```
 
 Manipulating sessions from the shell,
