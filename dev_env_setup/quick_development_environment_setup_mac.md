@@ -79,6 +79,21 @@ Here's how it looks like
 # Remove duplicates in history
 setopt HIST_IGNORE_ALL_DUPS
 alias jn='jupyter notebook'
+alias zzz='pmset sleepnow'
+
+# git
+alias lgrh='echo "List GitHub clone url";curl https://api.github.com/users/palpen/repos?per_page=100 | grep  -o "https://github.com/[^\"]*\.git"'
+alias ga='git add '
+alias gc='git commit -m '
+alias gst='git status'
+
+# Get cd history using `cd - TAB`
+# From from https://unix.stackexchange.com/a/157773
+setopt AUTO_PUSHD                  # pushes the old directory onto the stack
+setopt PUSHD_MINUS                 # exchange the meanings of '+' and '-'
+setopt CDABLE_VARS                 # expand the expression (allows 'cd -2/tmp')
+autoload -U compinit && compinit   # load + start completion
+zstyle ':completion:*:directory-stack' list-colors '=(#b) #([0-9]#)*( *)==95=38;5;12'
 ```
 
 ## Vim and Tmux config files
