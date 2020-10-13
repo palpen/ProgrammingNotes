@@ -6,14 +6,14 @@ This works only if machines are on the same network. The set up required to secu
     - `jupyter notebook --no-browser --port=8889`
     - Note the access token when the notebook starts. This is a random sequence of characters found in the URL `http://localhost:8889/?token=ACCESS_TOKEN_HERE`
 2. On a separate terminal window, create an ssh tunnel to your remote machine binding a local port to the port you set in the remote machine
-    - `ssh -N -L localhost:8887:localhost:8889 <username>@<server ip address>`
+    - `ssh -N -L localhost:8887:localhost:8889 <USER>@<IPADDRESS>`
     - Enter `localhost:8887` on your browser to access the remote Jupyter notebook
     - If you are asked for an access token, you can find it in the terminal where you activated the remote Jupyter notebook (see 1.)
     - If you get a "bind: Address already in use" error, use a different port number. It may be that you are already using that port number on a local Jupyter notebook.
 
 ## Summary
 - `jupyter notebook --no-browser --port=8889` (remote)
-- `ssh -N -L localhost:8887:localhost:8889 <username>@<server ip address>` (local)
+- `ssh -N -L localhost:8887:localhost:8889 <USER>@<IPADDRESS>` (local)
 - `localhost:8887` (local browser)
 
 ## Custom setup
@@ -35,6 +35,8 @@ jupyssh(){
     # e.g. jupyssh ~/Dropbox/data_science/fastai_deeplearning/pt1/fastai fastai
     # Control + c after each part to move to next part
 
+    ANACONDA_PATH=/home/pspenano/anaconda2
+
     projectpath=$1
     envname=$2
 
@@ -48,14 +50,14 @@ jupyssh(){
     # Part 2
     echo "Activate environment ${envname} and initialize a Jupyter Lab session...(enter password follow by Control + C to move to next part)"
     ssh <USER>@<IPADDRESS> "cd ${projectpath};
-                                source /home/pspenano/anaconda2/bin/activate ${envname};
-                                /home/pspenano/anaconda2/bin/conda env list;
-                                /home/pspenano/anaconda2/envs/${envname}/bin/jupyter lab --no-browser --port=8889; exit"
+                                source ${ANACONDA_PATH}/bin/activate ${envname};
+                                ${ANACONDA_PATH}/bin/conda env list;
+                                ${ANACONDA_PATH}/envs/${envname}/bin/jupyter lab --no-browser --port=8889; exit"
     echo ""
 
     # Part 3: bind remote port 8889 to local port 8887
     echo "Bind remote port 8889 to local port 8887...(enter password then open new terminal window and execute jupybrowser)"
-    ssh -N -L localhost:8887:localhost:8889 pspenano@192.168.0.104
+    ssh -N -L localhost:8887:localhost:8889 <USER>@<IPADDRESS>
 }
 ```
 
