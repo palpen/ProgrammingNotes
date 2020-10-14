@@ -6,14 +6,14 @@ This works only if machines are on the same network. The set up required to secu
     - `jupyter notebook --no-browser --port=8889`
     - Note the access token when the notebook starts. This is a random sequence of characters found in the URL `http://localhost:8889/?token=ACCESS_TOKEN_HERE`
 2. On a separate terminal window, create an ssh tunnel to your remote machine binding a local port to the port you set in the remote machine
-    - `ssh -N -L localhost:8887:localhost:8889 <USER>@<IPADDRESS>`
+    - `ssh -N -L localhost:8887:localhost:8889 $USER@$IPADDRESS`
     - Enter `localhost:8887` on your browser to access the remote Jupyter notebook
     - If you are asked for an access token, you can find it in the terminal where you activated the remote Jupyter notebook (see 1.)
     - If you get a "bind: Address already in use" error, use a different port number. It may be that you are already using that port number on a local Jupyter notebook.
 
 ## Summary
 - `jupyter notebook --no-browser --port=8889` (remote)
-- `ssh -N -L localhost:8887:localhost:8889 <USER>@<IPADDRESS>` (local)
+- `ssh -N -L localhost:8887:localhost:8889 $USER@$IPADDRESS` (local)
 - `localhost:8887` (local browser)
 
 ## Custom setup
@@ -21,43 +21,57 @@ This works only if machines are on the same network. The set up required to secu
 - This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
 
 ```bash
-jupyssh(){
-    # When you provide the project folder and environment name arguements
-    # this function will cd into that folder in the remote machine and
-    # activate the environment for that project
+jupyssh() {
 
-    # Part 1 kills the port 8889 if already active
-    # Part 2 will initialize a Jupyter Lab notebook in the remote host
-    # Press Control+c to exit this ssh session and automatically
-    # enter Part 3 to bind the remote port 8889 to local port 8887
+    # Starts a jupyter lab session in remote machine and binds remote port
+    # to local port. This allows you to work on a jupyter notebook locally
+    # on a remote computer.
 
-    # usage: jupyssh <projectpath> <project environment name>
+    # To avoid having to enter passwords, copy public key to host computer
+    # by copying LOCAL_HOME/.ssh/id_rsa.pub to a file named REMOTE_HOME/.ssh/authorized_keys
+    # See https://stackoverflow.com/questions/3828164/how-do-i-access-my-ssh-public-key
+
+    # Requirements:
+    # 1. miniconda
+    # 2. jupyter lab
+
+    # Usage:
+    # jupyssh <project path in remote machine> <project environment name in remote machine>
     # e.g. jupyssh ~/Dropbox/data_science/fastai_deeplearning/pt1/fastai fastai
-    # Control + c after each part to move to next part
 
-    ANACONDA_PATH=/home/pspenano/anaconda2
+    # Information from remote computer
+    ANACONDA_PATH=/home/<USERNAME>/miniconda3
+    USER=<USERNAME>
+    IPADDRESS=<REMOTE IP ADDRESS>
 
     projectpath=$1
     envname=$2
 
-    # Part 1
-    # note single quote: we want to pass this command in its literal form
-    # to the remote machine (i.e. without evaluating $() in local machine)
-    echo "Kill port 8889 if already active...(enter password follow by Control + C to move to next part)"
-    ssh <USER>@<IPADDRESS> 'kill -9 $(lsof -t -i:8889); exit'
-    echo ""
+    if [ $1 = "stop" ]; then
+        echo "Stopping...";
+        ssh $USER@$IPADDRESS \
+            "${ANACONDA_PATH}/envs/${envname}/bin/jupyter notebook stop 8889;"
+        return 0
+    fi
 
-    # Part 2
-    echo "Activate environment ${envname} and initialize a Jupyter Lab session...(enter password follow by Control + C to move to next part)"
-    ssh <USER>@<IPADDRESS> "cd ${projectpath};
-                                source ${ANACONDA_PATH}/bin/activate ${envname};
-                                ${ANACONDA_PATH}/bin/conda env list;
-                                ${ANACONDA_PATH}/envs/${envname}/bin/jupyter lab --no-browser --port=8889; exit"
-    echo ""
+    # Find and kill process locking port 8887 in local computer
+    # (in case it is being used by a previous connection that was not closed)
+    lsof -ti:8887  -sTCP:LISTEN | xargs kill
 
-    # Part 3: bind remote port 8889 to local port 8887
-    echo "Bind remote port 8889 to local port 8887...(enter password then open new terminal window and execute jupybrowser)"
-    ssh -N -L localhost:8887:localhost:8889 <USER>@<IPADDRESS>
+    # Initializes conda environment and starts a jupyter lab session
+    echo "Initialize a Jupyter Lab session"
+    echo "To close session, do \"jupyssh stop ENVNAME\""
+
+    ssh -f $USER@$IPADDRESS \
+      "cd ${projectpath};
+      source ${ANACONDA_PATH}/bin/activate ${envname};
+      ${ANACONDA_PATH}/bin/conda env list;
+      ${ANACONDA_PATH}/envs/${envname}/bin/jupyter notebook stop 8889;
+      ${ANACONDA_PATH}/envs/${envname}/bin/jupyter lab --no-browser --port=8889; exit"
+
+    # Binds the remote port 8889 to local port 8887
+    echo "Open browser at http://localhost:8887"
+    ssh -N -L localhost:8887:localhost:8889 $USER@$IPADDRESS
 }
 ```
 
