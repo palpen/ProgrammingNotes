@@ -87,8 +87,9 @@ For vimrc file, see [this repository](https://github.com/palpen/config_files)
 
 ## Preview markdown files
 * Install the Google Chrome browser
-* Install the MarkDown Preview Plus Extension on Chrome (follow usage instructions)
-    * Chrome > Preferences > Markdown Preview Plus > Enable `Allow access to file URLs`
+* Install the MarkDown Preview Plus extension on Chrome (follow usage instructions)
+    * https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl
+    * Chrome > Preferences > Extensions > Markdown Preview Plus > Enable `Allow access to file URLs`
 * in Vim, open markdow file by `:!open -a /Applications/Google\ Chrome.app mymarkdownfile.md`
 
 ## Splitting windows
