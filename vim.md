@@ -14,6 +14,11 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 	* `Shift + i` to enter insert mode on those lines and insert #
 	* Escape to apply changes to the selected lines
 
+## Moving within a line (left-right motions)
+* Bring cursor to a character: `f<CHAR>`
+* Bring cursor before a character: `t<CHAR>`
+    * This is useful for deleting up to a charcter (say deleting the remaining contents of a list without deleting the final brace with `dt]`, where <CHAR>==`]`)
+
 ## Delete, yank and put
 D -> delete from cursor to end of line (characterwise)
 
@@ -23,6 +28,9 @@ D -> delete from cursor to end of line (characterwise)
 
 ### Inserting a line in the middle of another line
 `dd` will do a linewise deletion, which following a put command, `P` or `p`, will either insert the deleted line before or after the line in which the cursor is located. To insert the deleted line at the cursor position, do a characterwise deletion, `0D` (0 will move cursor to the begining of the line and `D` will do a characerwise deletion from the cursor to the end of the line). See https://vimhelp.org/motion.txt.html#linewise
+
+## Exploring file hierarchy
+* `:Explore` or `:E`
 
 ## Buffers
 vims way of editing multiple files within the same vim session.
@@ -34,6 +42,9 @@ vims way of editing multiple files within the same vim session.
     * `:b myfile.py` or `:b 2`
 * To toggle / switch between current and previous buffer, do `Control + 6`
 * Remap Control + j or k to toggle buffers (see .vimrc file)
+* To open a file in a split next to a file you are currently working on, do `:vsp` then open the file with `:e`
+* To resize splits so that they are even, do `Control + w` followed by `=`
+* To close all buffers at once, do `:qa`
 
 ## Search and replace
 * Place a # in front of every line: `:%s/^/#/`
@@ -116,10 +127,13 @@ The sequence of characters when recording would be
 
 ```
 qq
-^"f:i"$,
+^i"f:i",
 q
 ```
-records the macro and applies it to the first line. Then visually select the subsequent lines and do
+
+`i"` enters insert mode; `f:` finds the double colon and takes the cursor there; `i", inserts the final quote and the comma at the end of the line.
+
+The final `q` stops the recording. Finally, visually select the subsequent lines and do
 
 ```
 :'<,'>norm @q
