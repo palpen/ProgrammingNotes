@@ -14,17 +14,27 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 	* `Shift + i` to enter insert mode on those lines and insert #
 	* Escape to apply changes to the selected lines
 
+## Visual Mode
+* Enter visual mode: `v`
+* Visually select entire line: `Shift +v`
+* Start visual mode with the same area selected in previous operation: `gv`
+
+## Command mode
+* To enter command mode, do `:` in normal mode
+* To run a bash command in command mode, use `!`
+    * Say you want to align a visually selected group of text using the `column` command in bash. Visually select the text then do `:'<,'>!column -t`
+* `:%` means the entire file
+    * so `:%s/foo/bar/g` means to replace all instance of foo with bar in file
+
 ## Moving within a line (left-right motions)
 * Bring cursor to a character: `f<CHAR>`
 * Bring cursor before a character: `t<CHAR>`
     * This is useful for deleting up to a charcter (say deleting the remaining contents of a list without deleting the final brace with `dt]`, where <CHAR>==`]`)
 
-## Delete, yank and put
-D -> delete from cursor to end of line (characterwise)
-
-## Delete and insert
+## Deletion and insertion
 * `S` or `cc` to delete current line and enter insert mode.
     * `3S` deletes the next 3 lines
+* D -> delete from cursor to end of line (characterwise)
 
 ### Inserting a line in the middle of another line
 `dd` will do a linewise deletion, which following a put command, `P` or `p`, will either insert the deleted line before or after the line in which the cursor is located. To insert the deleted line at the cursor position, do a characterwise deletion, `0D` (0 will move cursor to the begining of the line and `D` will do a characerwise deletion from the cursor to the end of the line). See https://vimhelp.org/motion.txt.html#linewise
@@ -92,6 +102,7 @@ g
     * https://stackoverflow.com/a/48952069/3649966
     * Use visual-block to highlight lines, then ":", then "%normal $x", then hit enter
 * Leader key: in normal mode, press `\`
+* Aligning a column of text: Visually select the column then do `:'<,'>!column -t`
 
 ## .vimrc
 For vimrc file, see [this repository](https://github.com/palpen/config_files)
