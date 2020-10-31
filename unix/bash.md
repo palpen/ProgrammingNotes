@@ -82,9 +82,10 @@ See: https://www.blockloop.io/mastering-bash-and-terminal/
         - Good references
             - https://unix.stackexchange.com/a/156010/87545
 
-7. Search all files in directory that containg a given pattern. List the output.
-    * `grep -rnw "." -e 'pattern'`
-    * `-r` is to do a recursive search, `-n` is to display line number in which pattern appears, `-w` to match only complete words
+7. Search all occurence of a given pattern across all files in a directory
+    * `grep -HirIn "pattern" .`
+    * Searches for `pattern` in the current directory.
+    * `H` always shows the filename. `i` makes the pattern case insensitive. `r` searches does a recursive search of the directory. `I` ignores binary files. `n` prints the line number within each file where the pattern was found.
 
 ## System stuff
 1. Check if drive is mounted: `lsblk`
