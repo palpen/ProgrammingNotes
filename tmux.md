@@ -92,6 +92,7 @@ To equally balance layout of panes:
 
 ## Copy / Pasting in tmux
 * See https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
+* Also see https://unix.stackexchange.com/questions/58763/copy-text-from-one-tmux-pane-to-another-using-vim
 ```
 Prefix [ : enter copy mode (also scroll mode)
 Control + Space : begin selecting block of text you want to copy
