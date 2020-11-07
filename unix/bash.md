@@ -91,3 +91,16 @@ See: https://www.blockloop.io/mastering-bash-and-terminal/
 1. Check if drive is mounted: `lsblk`
     * If it doesn't have a mount point it is not mounted. To mount it, execute `udisksctl mount -b /dev/sdb1`  where `/dev/sdb1` is the disk you want to mount
     * In my case, the mount point becomes `/media/pspenano/2TB\ HDD`
+
+## Other useful commands
+
+* Sampling data from the command line
+
+```bash
+head -n1 fulldata.csv > sampled_data.csv
+tail -n+2 fulldata.csv | shuf -n 100000 >> sampled_data.csv
+```
+
+First line writes the header; the second line samples the file (excluding the header)
+
+
