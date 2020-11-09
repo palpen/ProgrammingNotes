@@ -52,9 +52,16 @@ vims way of editing multiple files within the same vim session.
     * `:b myfile.py` or `:b 2`
 * To toggle / switch between current and previous buffer, do `Control + 6`
 * Remap Control + j or k to toggle buffers (see .vimrc file)
-* To open a file in a split next to a file you are currently working on, do `:vsp` then open the file with `:e`
-* To resize splits so that they are even, do `Control + w` followed by `=`
 * To close all buffers at once, do `:qa`
+
+## Viewport navigation
+* To do a vertical split `:vsp` (for horizontal, `:sp`)
+* To navigate across splits, do `Control + w` then `h, j, k, or l`
+* To close all split and focus on current split
+* To zoom into current active buffer
+    * vertical split, `Control + w, |`
+    * horizontal split, `Control + w, _`
+* To equalize the splits, `Control + w, =`
 
 ## Search and replace
 * Place a # in front of every line: `:%s/^/#/`
@@ -114,13 +121,6 @@ For vimrc file, see [this repository](https://github.com/palpen/config_files)
     * Chrome > Preferences > Extensions > Markdown Preview Plus > Enable `Allow access to file URLs`
 * in Vim, open markdow file by `:!open -a /Applications/Google\ Chrome.app mymarkdownfile.md`
 
-## Splitting windows
-Pane, window, split same file
-
-* `:split` creates a horizontal split of the file
-* To navigate across splits, do `Control + w` then `h, j, k, or l`
-* `:close` closes the split
-* To equalize the splits, `Control + w` then `=`
 
 ## Macros
 
@@ -166,24 +166,3 @@ The result should be
 
 ### Tips
 * Use motions such as `w`, `b`, `^`, etc and not `hjkl` if lines are not the same length
-
-# Deprecated
-
-## Configuring VimR
-* [VimR](http://vimr.org) is a GUI based text editor build on NeoVim.
-* To configure the editor created an `init.vim` file in `~/.config/nvim`. Use `init.vim` the same way you would use a `.vimrc` file.
-* Color themes are stored in `~/.config/nvim/colors`
-	* Here's a useful color scheme [NeoSolarized](https://github.com/icymind/NeoSolarized)
-
-
-## Basic Vim Setup on Remote Server
-
-___tmux + vim + gruvbox color scheme___
-* Install Pathogen (vim plugin manager): https://github.com/tpope/vim-pathogen
-    * Add `execute pathogen#infect()` to top .vimrc config file
-* Place `export TERM=xterm-256color` in .bashrc or .zshrc config file
-* Install gruvbox colorscheme using Pathogen: https://github.com/morhetz/gruvbox/wiki/Installation
-* In .vimrc config file, add the following
-    * `syntax on`
-    * `colorscheme gruvbox`
-    * `set background=dark`
