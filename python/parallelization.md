@@ -1,4 +1,9 @@
-# Threading using ThreadPoolExecutor from concurrent.futures
+# How to parallelize code in Python
+
+### References
+* [Concurrent.futures vs multiprocessing in Python 3](https://stackoverflow.com/questions/20776189/concurrent-futures-vs-multiprocessing-in-python-3)
+* [What do the terms CPU bound and IO bound mean?](https://stackoverflow.com/questions/868568/what-do-the-terms-cpu-bound-and-i-o-bound-mean)
+* [Why is a Python IO bound task not blocked by the GIL](https://stackoverflow.com/questions/29270818/why-is-a-python-i-o-bound-task-not-blocked-by-the-gil)
 
 The code below shows
 
