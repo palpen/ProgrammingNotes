@@ -34,6 +34,7 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 ## Deletion and insertion
 * `S` or `cc` to delete current line and enter insert mode.
     * `3S` deletes the next 3 lines
+    * `set autoindent` to start insert mode at the end of indentation
 * D -> delete from cursor to end of line (characterwise)
 
 ### Inserting a line in the middle of another line
