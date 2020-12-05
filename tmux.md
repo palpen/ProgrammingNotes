@@ -54,6 +54,10 @@ w interactively choose a window from across sessions
 ### Panes
 
 ```
+q display pane index (useful information when swapping panes)
+{ swap current pane with pane to the left index
+} swap current pane with pane to the right index
+
 % vertical split
 " horizontal split
 
