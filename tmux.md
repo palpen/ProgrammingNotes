@@ -75,12 +75,21 @@ o switch to next pane
 ESC + →, ←, ↑, ↓ resize panes  (must be repeated for repeated adjustment)
 ```
 
-#### Joining a pane to a window
+### Package specific
+
+```
+# Resurrect
+Ctrl + s  save session
+Ctrl + r  restore session
+```
+
+
+## Joining a pane to a window
 - First, break the pane to a new window with `<Prefix> !`
 - Next, bind window containing the pane to the desired window with `:join-pane -t <NAME OF DESTINATION WINDOW>`
 - You can use the `-h` or `-v` option in `join-pane` to bind horizontally or vertically
 
-#### Alternative way to resize panes
+## Alternative way to resize panes
 ```
 :resize-pane -D 10
 :resize-pane -U 10
