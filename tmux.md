@@ -28,7 +28,7 @@ To temporarily exit and subsequenty reenter a tmux session
 (outside of tmux)  tmux attach     Reattach previous session
 ```
 
-## Shortcuts
+## Commands
 
 Before any of the single character shortcuts below, hit the prefix
 
