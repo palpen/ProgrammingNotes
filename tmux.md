@@ -36,11 +36,12 @@ $                     change session name
 s                     interactively switch sessions
 ```
 
-Manipulating sessions from the shell,
+Manipulating sessions from the shell outside of a tmux session
 ```
 tmux attach-session -t [SESSION-NAME]
 tmux rename-session [-t CURRENT-NAME [NEW-NAME]
-tmux ls --> List all active sessions
+tmux ls                                           List all active sessions
+tmux kill-server                                  Kill all active sessions
 ```
 ### Windows (tabs)
 ```
