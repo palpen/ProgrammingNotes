@@ -1,5 +1,6 @@
 # tmux Shortcuts and Cheatsheet
 
+
 ## Installing tmux
 
 You must install tmux on the remote server you want to use it on
@@ -15,6 +16,17 @@ Debian / Ubuntu
 Start a new tmux session:
 
 `tmux`
+
+A tmux session is a group of `windows`. A `window` is a group of panes. Closing a pane in a window containing only a single pane will close the window. Closing a window in a session that contains a single window will close the tmux session (even if you have multiple session instances).
+
+To list all active sessions (and all windows attached to them), do `Prefix + s`.
+
+To temporarily exit and subsequenty reenter a tmux session
+
+```
+(within tmux)      Prefix + d      Detach from a session  and return to shell environment
+(outside of tmux)  tmux attach     Reattach previous session
+```
 
 ## Shortcuts
 
