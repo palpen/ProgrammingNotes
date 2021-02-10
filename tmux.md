@@ -86,6 +86,7 @@ o switch to next pane
     * To quit scroll mode, press q
 
 ESC + →, ←, ↑, ↓ resize panes  (must be repeated for repeated adjustment)
+Hold Alt + →, ←, ↑, ↓  resize panes
 ```
 
 ### Package specific
