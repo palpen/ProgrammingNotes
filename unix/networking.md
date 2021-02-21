@@ -8,7 +8,7 @@
     - `sudo apt-get install openssh-server openssh-client`
 2. Get the private ip address of the pc in your local network
     - In the terminal, enter `ip a | grep inet`
-    - You'll see severl output but select the ip address next to inet, particularly the one with a `global` scope
+    - You'll see a multiline output but select the ip address next to the line that begins with inet, particularly the one with a `global` scope
 3. Test the connection using the ip from above and the username of the linux pc
     - `ssh linuxpcusername@ipaddress`
 
