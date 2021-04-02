@@ -1,5 +1,7 @@
 # tmux Shortcuts and Cheatsheet
 
+# Tmux man page
+https://man7.org/linux/man-pages/man1/tmux.1.html
 
 ## Installing tmux
 
