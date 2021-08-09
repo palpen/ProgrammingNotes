@@ -40,9 +40,9 @@ jupyssh() {
     # e.g. jupyssh ~/Dropbox/data_science/fastai_deeplearning/pt1/fastai fastai
 
     # Information from remote computer
-    ANACONDA_PATH=/home/<USERNAME>/miniconda3
     USER=<USERNAME>
     IPADDRESS=<REMOTE IP ADDRESS>
+    ANACONDA_PATH=/home/$USER/miniconda3
 
     projectpath=$1
     envname=$2
