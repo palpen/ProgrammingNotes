@@ -30,7 +30,7 @@ To avoid having to enter passwords, copy public key to host computer by copying 
         - To install JupyterLab, do `conda install -c conda-forge jupyterlab` following installing of miniconda.
         - Install it outside of the base virtual environment to ensure that it is available for all virtual environments
 
-Copy the code below into your .bashrc or .zshrc file:
+Copy the code below into your .bashrc or .zshrc file and follow the usage instructions in the doc string:
 
 ```bash
 jupyssh() {
@@ -75,6 +75,18 @@ jupyssh() {
 ```
 
 Reference: https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
+
+### Listing and killing servers
+
+* On the remote pc, you can list all activate servers with `jupyter server list`
+* To kill a server, get the port number from the command above, then get the port number with (replace PORTNUMBER)
+    
+    ```
+    sudo lsof -iTCP:PORTNUMBER -sTCP:LISTEN
+    ```
+    
+  Then using the PID number, kill it with `kill PIDNUMBER`
+
 
 ## Jupyter Notebooks on GCP Compute Engine
 1. SSH into example-instance and bind remote port 5000 to the local port 2222:
