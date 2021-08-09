@@ -28,6 +28,7 @@ To avoid having to enter passwords, copy public key to host computer by copying 
         - To install miniconde, do a `wget` on one of the installation urls from the [miniconda installation page](https://docs.conda.io/en/latest/miniconda.html#linux-installers) to download the installation script.
     2. JupyterLab
         - To install JupyterLab, do `conda install -c conda-forge jupyterlab` following installing of miniconda.
+        - Install it outside of the base virtual environment to ensure that it is available for all virtual environments
 
 Copy the code below into your .bashrc or .zshrc file:
 
