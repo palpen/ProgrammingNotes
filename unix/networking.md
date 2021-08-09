@@ -10,7 +10,8 @@
     - In the terminal, enter `ip a | grep inet`
     - You'll see a multiline output but select the ip address next to the line that begins with inet, particularly the one with a `global` scope
 3. Test the connection using the ip from above and the username of the linux pc
-    - `ssh linuxpcusername@ipaddress`
+    - Get username with `whoami` command
+    - `ssh username@ipaddress`
 
 
 ## How to generate and copy public SSH key to a server
