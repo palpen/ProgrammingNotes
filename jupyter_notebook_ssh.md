@@ -17,24 +17,22 @@ This works only if machines are on the same network. The set up required to secu
 - `localhost:8887` (local browser)
 
 ## Custom setup
-- see `private_work.sh` in `/Users/palermospenano/.bashrc.d`
-- This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
+
+Starts a jupyter lab session in remote machine and binds remote port to local port. This allows you to work on a jupyter notebook locally from a remote computer. This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
+
+#### Side note
+To avoid having to enter passwords, copy public key to host computer by copying LOCAL_HOME/.ssh/id_rsa.pub to a file named REMOTE_HOME/.ssh/authorized_keys
+
+#### Requirements (on remote pc):
+    1. miniconda
+        - To install miniconde, do a `wget` on one of the installation urls from the [miniconda installation page](https://docs.conda.io/en/latest/miniconda.html#linux-installers) to download the installation script.
+    2. JupyterLab
+        - To install JupyterLab, do `conda install -c conda-forge jupyterlab` following installing of miniconda.
+
+Copy the code below into your .bashrc or .zshrc file:
 
 ```bash
 jupyssh() {
-
-    # Starts a jupyter lab session in remote machine and binds remote port
-    # to local port. This allows you to work on a jupyter notebook locally
-    # on a remote computer.
-
-    # To avoid having to enter passwords, copy public key to host computer
-    # by copying LOCAL_HOME/.ssh/id_rsa.pub to a file named REMOTE_HOME/.ssh/authorized_keys
-    # See https://stackoverflow.com/questions/3828164/how-do-i-access-my-ssh-public-key
-
-    # Requirements:
-    # 1. miniconda
-    # 2. jupyter lab
-
     # Usage:
     # jupyssh <project path in remote machine> <project environment name in remote machine>
     # e.g. jupyssh ~/Dropbox/data_science/fastai_deeplearning/pt1/fastai fastai
