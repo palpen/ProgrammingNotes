@@ -16,9 +16,9 @@ This works only if machines are on the same network. The set up required to secu
 - `ssh -N -L localhost:8887:localhost:8889 $USER@$IPADDRESS` (local)
 - `localhost:8887` (local browser)
 
-## Custom setup
+## Start a remote Jupyter Notebook and use it locally
 
-Starts a jupyter lab session in remote machine and binds remote port to local port. This allows you to work on a jupyter notebook locally from a remote computer. This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
+Starts a jupyter lab session in remote machine and binds remote port to local port. This allows you to work on a jupyter notebook locally that has been spawned from a remote computer. This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
 
 #### Side note
 To avoid having to enter passwords, copy public key to host computer by copying LOCAL_HOME/.ssh/id_rsa.pub to a file named REMOTE_HOME/.ssh/authorized_keys
