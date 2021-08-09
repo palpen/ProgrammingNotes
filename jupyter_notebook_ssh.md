@@ -16,7 +16,7 @@ This works only if machines are on the same network. The set up required to secu
 - `ssh -N -L localhost:8887:localhost:8889 $USER@$IPADDRESS` (local)
 - `localhost:8887` (local browser)
 
-## Start a remote Jupyter Notebook and use it locally
+## Start a remote Jupyter Lab session and use it locally
 
 Starts a jupyter lab session in remote machine and binds remote port to local port. This allows you to work on a jupyter notebook locally that has been spawned from a remote computer. This function will cd into the project directory, activate the specified conda environment, and initiate a jupyter lab notebook without the browser. Each step requires you to hit control + c to initiate the next step.
 
@@ -49,7 +49,7 @@ jupyssh() {
     if [ $1 = "stop" ]; then
         echo "Stopping...";
         ssh $USER@$IPADDRESS \
-            "${ANACONDA_PATH}/envs/${envname}/bin/jupyter notebook stop 8889;"
+            "${ANACONDA_PATH}/envs/${envname}/bin/jupyter lab stop 8889;"
         return 0
     fi
 
@@ -65,7 +65,7 @@ jupyssh() {
       "cd ${projectpath};
       source ${ANACONDA_PATH}/bin/activate ${envname};
       ${ANACONDA_PATH}/bin/conda env list;
-      ${ANACONDA_PATH}/envs/${envname}/bin/jupyter notebook stop 8889;
+      ${ANACONDA_PATH}/envs/${envname}/bin/jupyter lab stop 8889;
       ${ANACONDA_PATH}/envs/${envname}/bin/jupyter lab --no-browser --port=8889; exit"
 
     # Binds the remote port 8889 to local port 8887
