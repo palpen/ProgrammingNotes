@@ -1,5 +1,8 @@
 # Notes on Vim
 
+# Don't use Vim, use NeoVim
+* When using the Alacritty terminal, NeoVim seems to respect the terminal's color setting out of the box.
+
 ## Motion
 Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select)
 * Select a word: `viw`
@@ -40,10 +43,12 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 ### Inserting a line in the middle of another line
 `dd` will do a linewise deletion, which following a put command, `P` or `p`, will either insert the deleted line before or after the line in which the cursor is located. To insert the deleted line at the cursor position, do a characterwise deletion, `0D` (0 will move cursor to the begining of the line and `D` will do a characerwise deletion from the cursor to the end of the line). See https://vimhelp.org/motion.txt.html#linewise
 
-## Exploring file system
-:Sex,:Vex, :Tex and :Ex are all useful commands for ex(ploring) the files on your system if you want to use something different from :e
+## Exploring the file system from within Vim
 
-(where S/V/T are short for Split/Vertical/Tab)
+* Explore file system and open a file in current viewport split: `:Ex`
+* Create a split first then explore the file system
+    * `:Sex`, `:Vex`, `Tex` for horizontal, vertical, and tab splits
+* To exit the file exploration interface, do `:q`
 
 Source: https://stackoverflow.com/questions/1445992/vim-file-navigation
 
@@ -59,11 +64,12 @@ vims way of editing multiple files within the same vim session.
 * Remap Control + j or k to toggle buffers (see .vimrc file)
 * To close all buffers at once, do `:qa`
 
-## Viewport navigation
+## Viewport navigation ("Windows")
+* To create a new window `Control + w, n` (to close it, `:q`)
 * To do a vertical split `:vsp` (for horizontal, `:sp`)
 * To navigate across splits, do `Control + w` then `h, j, k, or l`
 * To close all split and focus on current split
-* To zoom into current active buffer
+* To zoom into current active viewport split
     * vertical split, `Control + w, |`
     * horizontal split, `Control + w, _`
 * To equalize the splits, `Control + w, =`
