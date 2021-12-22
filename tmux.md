@@ -78,6 +78,7 @@ q display pane index (useful information when swapping panes)
 
 z toggle zoom in current active pane
 x kill (close) pane
+space toggle layout (can switch from hortizontal to vertical and vice versa)
 
 o switch to next pane
 ; switch to previous pane
