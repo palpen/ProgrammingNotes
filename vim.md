@@ -3,6 +3,15 @@
 # Don't use Vim, use NeoVim
 * When using the Alacritty terminal, NeoVim seems to respect the terminal's color setting out of the box.
 
+## Saving vim sessions
+
+Saves all the windows and open files (and buffers?) after closing vim so that you can recover the same setup again next time [Source](https://jvns.ca/blog/2017/09/10/vim-sessions/)
+
+* Make session: `mks ~/.vim/sessions/mysession.vim`
+* Open a session
+    * In Vim, `:source ~/.vim/sessions/mysession.vim`
+    * In a terminal, `vim -S ~/.vim/sessions/mysession.vim`
+
 ## Motion
 Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select)
 * Select a word: `viw`
