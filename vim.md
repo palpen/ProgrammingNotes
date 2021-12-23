@@ -61,6 +61,18 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 
 Source: https://stackoverflow.com/questions/1445992/vim-file-navigation
 
+## Tabs
+
+Tabs are useful for working on a seperate part of the project without messing with your current view. For example, you can have files from folder `foo/` opened across multiple windows in one tab and files from folder `bar/` opened in an another tab.
+
+* Create a new window in a new tab, `:tabnew`
+* Previously accessed tab, `g<Tab>`
+* Cycle through tabs, `gt`
+* Access the tab in position [count], `[count]gt`
+* List all windows within each tab, `:tabs`
+* Close current tab (and all windows in it), `:tabc`
+* For more information, `:help tab-page-commands`
+
 ## Buffers
 vims way of editing multiple files within the same vim session.
 
