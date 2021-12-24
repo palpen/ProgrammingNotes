@@ -33,6 +33,9 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 
 ## Command mode
 * To enter command mode, do `:` in normal mode
+* To see a list of previously run commands, `q:`
+    * To run it, place your cursor on the command and hit enter
+    * To quit it, `:q`
 * To run a bash command in command mode, use `!`
     * Say you want to align a visually selected group of text using the `column` command in bash. Visually select the text then do `:'<,'>!column -t`
 * `:%` means the entire file
