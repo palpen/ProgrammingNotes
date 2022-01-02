@@ -1,5 +1,7 @@
 # Notes on Vim
 
+[My vimrc file](https://github.com/palpen/config_files/blob/master/.vimrc)
+
 # Don't use Vim, use NeoVim
 * When using the Alacritty terminal, NeoVim seems to respect the terminal's color setting out of the box.
 
@@ -26,6 +28,12 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 	* `Shift + i` to enter insert mode on those lines and insert #
 	* Escape to apply changes to the selected lines
 
+## Scrolling
+
+* Recenter the line that the cursor is on: `zz`
+* Scroll up or down: `Control + u` or `Control + d`
+    * To scroll one line at a time, use `e` or `y` instead
+
 ## Visual Mode
 * Enter visual mode: `v`
 * Visually select entire line: `Shift +v`
@@ -43,7 +51,7 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 
 ## Moving within a line (left-right motions)
 * Bring cursor to a character: `f<CHAR>`
-* Bring cursor before a character: `t<CHAR>`
+* Bring cursor _before_ a character: `t<CHAR>`
     * This is useful for deleting up to a charcter (say deleting the remaining contents of a list without deleting the final brace with `dt]`, where <CHAR>==`]`)
 
 ## Deletion and insertion
