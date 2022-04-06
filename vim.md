@@ -151,7 +151,7 @@ g
 * Delete character across visually selected group of text spanning multiple lines
     * https://stackoverflow.com/a/48952069/3649966
     * Use visual-block to highlight lines, then ":", then "%normal $x", then hit enter
-* Leader key: in normal mode, press `\`
+* Leader key: By default it is `\`, but it may be mapped to `,`. Search the `.vimrc` file for `mapleader`.
 * Aligning a column of text: Visually select the column then do `:'<,'>!column -t`
 
 ## .vimrc
