@@ -146,16 +146,15 @@ g
 * How to comment / uncomment out a block of code: https://stackoverflow.com/a/23063140/3649966
 * Copy to clipboard
     * Visually select segment to copy, then `:w !pbcopy`
-* Display name of current file: Control + g
-* Search for word under cursor (in vim): place cursor on word then press, * (Shift + 8)
+* Display name of current file: `Control + g`
+* Search for word under cursor (in vim): place cursor on word then press, * (`Shift + 8`)
 * Delete character across visually selected group of text spanning multiple lines
     * https://stackoverflow.com/a/48952069/3649966
     * Use visual-block to highlight lines, then ":", then "%normal $x", then hit enter
 * Leader key: By default it is `\`, but it may be mapped to `,`. Search the `.vimrc` file for `mapleader`.
 * Aligning a column of text: Visually select the column then do `:'<,'>!column -t`
-
-## .vimrc
-For vimrc file, see [this repository](https://github.com/palpen/config_files)
+* Clear all highlighted elements (following a search query, for example): `, + n`
+    * `,` has been mapped to the leader key in your `.vimrc`
 
 ## Preview markdown files
 * Install the Google Chrome browser
