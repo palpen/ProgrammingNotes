@@ -41,7 +41,7 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 
 ## Command mode
 * To enter command mode, do `:` in normal mode
-* To see a list of previously run commands, `q:`
+* To see your command history, do `q:`
     * To run it, place your cursor on the command and hit enter
     * To quit it, `:q`
 * To run a bash command in command mode, use `!`
@@ -95,6 +95,7 @@ vims way of editing multiple files within the same vim session.
 * To toggle / switch between current and previous buffer, do `Control + 6`
 * Remap Control + j or k to toggle buffers (see .vimrc file)
 * To close all buffers at once, do `:qa`
+* To close multiple buffers---e.g. buffer 6, 8, and 10---by their buffer ids, do `:bd 6 8 10`
 
 ## Viewport navigation ("Windows")
 * To create a new window `Control + w, n` (to close it, `:q`)
