@@ -66,9 +66,11 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 ## Exploring the file system from within Vim
 
 * Explore file system and open a file in current viewport split: `:Ex`
+    * To return to the previous file that you were on when you're done, do `:bp`
+    * Doing `:q` will close the viewport and lose the view into the file you were previously working on
 * Create a split first then explore the file system
     * `:Sex`, `:Vex`, `Tex` for horizontal, vertical, and tab splits
-* To exit the file exploration interface, do `:q`
+    * To exit, simply do `:q`, which will close the viewport that was opened by the `S, V, T` command prefix
 
 Source: https://stackoverflow.com/questions/1445992/vim-file-navigation
 
@@ -92,7 +94,8 @@ vims way of editing multiple files within the same vim session.
 * To toggle across files in the buffer, do `:b <TAB>`
     * One can also type name of the file in the buffer or its number
     * `:b myfile.py` or `:b 2`
-* To toggle / switch between current and previous buffer, do `Control + 6`
+* To go to the previous buffer, `:bp`
+* To toggle / switch between current and previous buffer, do `Control + Shift + 6`
 * Remap Control + j or k to toggle buffers (see .vimrc file)
 * To close all buffers at once, do `:qa`
 * To close multiple buffers---e.g. buffer 6, 8, and 10---by their buffer ids, do `:bd 6 8 10`
