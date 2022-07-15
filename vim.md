@@ -46,8 +46,6 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
     * To quit it, `:q`
 * To run a bash command in command mode, use `!`
     * Say you want to align a visually selected group of text using the `column` command in bash. Visually select the text then do `:'<,'>!column -t`
-* `:%` means the entire file
-    * so `:%s/foo/bar/g` means to replace all instance of foo with bar in file
 
 ## Moving within a line (left-right motions)
 * Bring cursor to a character: `f<CHAR>`
@@ -104,6 +102,7 @@ vims way of editing multiple files within the same vim session.
 * To create a new window `Control + w, n` (to close it, `:q`)
 * To do a vertical split `:vsp` (for horizontal, `:sp`)
 * To navigate across splits, do `Control + w` then `h, j, k, or l`
+    * Note: this command is mapped to `Control + h,j,k,l` in my `.vimrc`
 * To close all split and focus on current split
 * To zoom into current active viewport split
     * vertical split, `Control + w, |`
@@ -111,6 +110,10 @@ vims way of editing multiple files within the same vim session.
 * To equalize the splits, `Control + w, =`
 
 ## Search and replace
+* Prefixing the commands below with a `%` will execute the operation on the entire page
+    * Alternatively, you may want to do a search and replace operation on only a section of the file. To do this, visually select the portion of the text you want to change and when you enter the command mode, you'll see `%` replaced with `'<,'>`
+* To do a simple global search and replace, do `:%s/foo/bar/g` 
+    * This will replace all instance of foo with bar in file
 * Place a # in front of every line: `:%s/^/#/`
 * Place a , at the end of every line: `:%s/$/,/`
 * Using `gn` to change text that match the current search pattern
