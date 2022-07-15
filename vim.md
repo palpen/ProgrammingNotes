@@ -120,6 +120,8 @@ vims way of editing multiple files within the same vim session.
     * Search the word using `/`
     * In normal mode, do `cgn` to change matched text under cursor
     * To change subsequent matches, hit `.` (no need to hit `n`)
+* Search and replace across multiple files in a given directory
+    * [See this StackOverflow answer that uses vim's quickfix feature](https://vi.stackexchange.com/a/10310)
 
 ## Code folding
 * To fold a block of code, visually select the code to fold and do `zf`
