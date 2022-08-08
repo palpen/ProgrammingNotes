@@ -30,7 +30,17 @@ To temporarily exit and subsequenty reenter a tmux session
 (outside of tmux)  tmux attach     Reattach previous session
 ```
 
-## Commands
+### More tmux session commands
+```
+tmux new -s MY-NEW-SESSION                        Create a new named session
+tmux attach-session -t SESSION-NAME
+tmux rename-session -t CURRENT-NAME NEW-NAME
+tmux ls                                           List all active sessions
+tmux kill-session -t SESSION-NAME
+tmux kill-server                                  Kill all active sessions
+```
+
+## Common Prefixed Commands
 
 Before any of the single character shortcuts below, hit the prefix
 
@@ -50,13 +60,6 @@ $                     change session name
 s                     interactively switch sessions
 ```
 
-Manipulating sessions from the shell outside of a tmux session
-```
-tmux attach-session -t [SESSION-NAME]
-tmux rename-session [-t CURRENT-NAME [NEW-NAME]
-tmux ls                                           List all active sessions
-tmux kill-server                                  Kill all active sessions
-```
 ### Windows (tabs)
 ```
 c create new window
