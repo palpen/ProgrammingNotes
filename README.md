@@ -8,7 +8,7 @@ Notes I review frequently:
 * [tmux.md](https://github.com/palpen/ProgrammingNotes/blob/master/tmux.md)
 * [bash.md](https://github.com/palpen/ProgrammingNotes/blob/master/unix/bash.md)
 
-[My development environment setup on MacOS](https://github.com/palpen/ProgrammingNotes/blob/master/dev_env_setup/development_environment_setup_mac.md)
+[My development environment setup on MacOS](https://github.com/palpen/ProgrammingNotes/blob/master/dev_env_setup/development_environment_setup_macos.md)
 
 ---
 
