@@ -11,6 +11,7 @@
     - Move conda initializer from `.bash_profile` to `.zshrc`
 6. [Rectangle](https://github.com/rxhanson/Rectangle): Window manager
 7. Google Chrome
+8. [Xnapper](https://xnapper.com/): For taking beautiful screenshots and making it easy to copy and paste them.
 
 ## Vim, Tmux, oh-my-zsh config files and themes
 [config_files](https://github.com/palpen/config_files)
