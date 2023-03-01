@@ -28,8 +28,8 @@ Reference: [Text-object selection](http://vimdoc.sourceforge.net/htmldoc/motion.
 	* `Shift + i` to enter insert mode on those lines and insert #
 	* Escape to apply changes to the selected lines
 * Navigate to across location in the jump list (previous and next cursor location):
-        * Previous: Ctrl + o (o for old)
-        * Next: Ctrl + i
+	* Previous: Ctrl + o (o for old)
+	* Next: Ctrl + i
 
 ## Scrolling
 
