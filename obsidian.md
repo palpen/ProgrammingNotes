@@ -20,6 +20,7 @@
 - How to adjust image size: Add an integer number after the pipe char in image line like so ![[my_img.png | 200]]
 
 # Plugins
+- Obsidian-tasks
 - Highlightr
 - Periodic Notes
 - Pane Relief
