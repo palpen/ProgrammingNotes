@@ -30,10 +30,10 @@
 A task manager plugin.
 
 - To tag a line item as a task, mark with the global task filter (defined in the settings) tag
-    - I've set mine to #todo
-- To view all tasks tagged in the vault, open a new document and type
+    - I've set mine to `#todo`
+- To view all tasks tagged with your global task filter in the vault, create a `tasks` code block:
 
-    > \```todo
+    > \```tasks
     > 
     > \```
 
